@@ -1,0 +1,1097 @@
+Created by PLY version 3.2 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> main
+Rule 1     main -> rule
+Rule 2     main -> main rule
+Rule 3     rule -> fieldspec tags
+Rule 4     rule -> fieldspec direction fieldspec tags
+Rule 5     fieldspec -> expression
+Rule 6     fieldspec -> expression *
+Rule 7     expression -> field
+Rule 8     expression -> validation
+Rule 9     expression -> function_call
+Rule 10    name -> NAME
+Rule 11    field -> FIELD
+Rule 12    validation -> field : validator_list
+Rule 13    function_call -> name ( argument_list )
+Rule 14    validator_list -> validator
+Rule 15    validator_list -> validator_list , validator
+Rule 16    argument_list -> argument
+Rule 17    argument_list -> argument_list , argument
+Rule 18    validator -> name
+Rule 19    validator -> field
+Rule 20    validator -> literal
+Rule 21    validator -> tuple
+Rule 22    validator -> list
+Rule 23    validator -> function_call
+Rule 24    argument -> name
+Rule 25    argument -> field
+Rule 26    argument -> literal
+Rule 27    argument -> tuple
+Rule 28    argument -> list
+Rule 29    argument -> function_call
+Rule 30    literal -> INTEGER
+Rule 31    literal -> FLOAT
+Rule 32    literal -> STRING
+Rule 33    tuple -> ( argument_list )
+Rule 34    tuple -> ( argument_list , )
+Rule 35    list -> [ argument_list ]
+Rule 36    direction -> ARROW
+Rule 37    direction -> LARROW
+Rule 38    direction -> RARROW
+Rule 39    tags -> [ tag_list ]
+Rule 40    tags -> empty
+Rule 41    tag_list -> tag
+Rule 42    tag_list -> tag_list , tag
+Rule 43    tag -> NAME
+Rule 44    tag -> ! NAME
+Rule 45    empty -> <empty>
+
+Terminals, with rules where they appear
+
+!                    : 44
+(                    : 13 33 34
+)                    : 13 33 34
+*                    : 6
+,                    : 15 17 34 42
+:                    : 12
+ARROW                : 36
+FIELD                : 11
+FLOAT                : 31
+INTEGER              : 30
+LARROW               : 37
+NAME                 : 10 43 44
+RARROW               : 38
+STRING               : 32
+[                    : 35 39
+]                    : 35 39
+error                : 
+
+Nonterminals, with rules where they appear
+
+argument             : 16 17
+argument_list        : 13 17 33 34 35
+direction            : 4
+empty                : 40
+expression           : 5 6
+field                : 7 12 19 25
+fieldspec            : 3 4 4
+function_call        : 9 23 29
+list                 : 22 28
+literal              : 20 26
+main                 : 2 0
+name                 : 13 18 24
+rule                 : 1 2
+tag                  : 41 42
+tag_list             : 39 42
+tags                 : 3 4
+tuple                : 21 27
+validation           : 8
+validator            : 14 15
+validator_list       : 12 15
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . main
+    (1) main -> . rule
+    (2) main -> . main rule
+    (3) rule -> . fieldspec tags
+    (4) rule -> . fieldspec direction fieldspec tags
+    (5) fieldspec -> . expression
+    (6) fieldspec -> . expression *
+    (7) expression -> . field
+    (8) expression -> . validation
+    (9) expression -> . function_call
+    (11) field -> . FIELD
+    (12) validation -> . field : validator_list
+    (13) function_call -> . name ( argument_list )
+    (10) name -> . NAME
+
+    FIELD           shift and go to state 4
+    NAME            shift and go to state 6
+
+    validation                     shift and go to state 1
+    name                           shift and go to state 2
+    fieldspec                      shift and go to state 3
+    rule                           shift and go to state 5
+    field                          shift and go to state 7
+    function_call                  shift and go to state 8
+    main                           shift and go to state 9
+    expression                     shift and go to state 10
+
+state 1
+
+    (8) expression -> validation .
+
+    *               reduce using rule 8 (expression -> validation .)
+    [               reduce using rule 8 (expression -> validation .)
+    ARROW           reduce using rule 8 (expression -> validation .)
+    LARROW          reduce using rule 8 (expression -> validation .)
+    RARROW          reduce using rule 8 (expression -> validation .)
+    FIELD           reduce using rule 8 (expression -> validation .)
+    NAME            reduce using rule 8 (expression -> validation .)
+    $end            reduce using rule 8 (expression -> validation .)
+
+
+state 2
+
+    (13) function_call -> name . ( argument_list )
+
+    (               shift and go to state 11
+
+
+state 3
+
+    (3) rule -> fieldspec . tags
+    (4) rule -> fieldspec . direction fieldspec tags
+    (39) tags -> . [ tag_list ]
+    (40) tags -> . empty
+    (36) direction -> . ARROW
+    (37) direction -> . LARROW
+    (38) direction -> . RARROW
+    (45) empty -> .
+
+    [               shift and go to state 17
+    ARROW           shift and go to state 16
+    LARROW          shift and go to state 15
+    RARROW          shift and go to state 14
+    FIELD           reduce using rule 45 (empty -> .)
+    NAME            reduce using rule 45 (empty -> .)
+    $end            reduce using rule 45 (empty -> .)
+
+    direction                      shift and go to state 12
+    empty                          shift and go to state 18
+    tags                           shift and go to state 13
+
+state 4
+
+    (11) field -> FIELD .
+
+    )               reduce using rule 11 (field -> FIELD .)
+    ,               reduce using rule 11 (field -> FIELD .)
+    :               reduce using rule 11 (field -> FIELD .)
+    *               reduce using rule 11 (field -> FIELD .)
+    [               reduce using rule 11 (field -> FIELD .)
+    ARROW           reduce using rule 11 (field -> FIELD .)
+    LARROW          reduce using rule 11 (field -> FIELD .)
+    RARROW          reduce using rule 11 (field -> FIELD .)
+    FIELD           reduce using rule 11 (field -> FIELD .)
+    NAME            reduce using rule 11 (field -> FIELD .)
+    $end            reduce using rule 11 (field -> FIELD .)
+    ]               reduce using rule 11 (field -> FIELD .)
+
+
+state 5
+
+    (1) main -> rule .
+
+    FIELD           reduce using rule 1 (main -> rule .)
+    NAME            reduce using rule 1 (main -> rule .)
+    $end            reduce using rule 1 (main -> rule .)
+
+
+state 6
+
+    (10) name -> NAME .
+
+    (               reduce using rule 10 (name -> NAME .)
+    )               reduce using rule 10 (name -> NAME .)
+    ,               reduce using rule 10 (name -> NAME .)
+    ]               reduce using rule 10 (name -> NAME .)
+    *               reduce using rule 10 (name -> NAME .)
+    [               reduce using rule 10 (name -> NAME .)
+    ARROW           reduce using rule 10 (name -> NAME .)
+    LARROW          reduce using rule 10 (name -> NAME .)
+    RARROW          reduce using rule 10 (name -> NAME .)
+    FIELD           reduce using rule 10 (name -> NAME .)
+    NAME            reduce using rule 10 (name -> NAME .)
+    $end            reduce using rule 10 (name -> NAME .)
+
+
+state 7
+
+    (7) expression -> field .
+    (12) validation -> field . : validator_list
+
+    *               reduce using rule 7 (expression -> field .)
+    [               reduce using rule 7 (expression -> field .)
+    ARROW           reduce using rule 7 (expression -> field .)
+    LARROW          reduce using rule 7 (expression -> field .)
+    RARROW          reduce using rule 7 (expression -> field .)
+    FIELD           reduce using rule 7 (expression -> field .)
+    NAME            reduce using rule 7 (expression -> field .)
+    $end            reduce using rule 7 (expression -> field .)
+    :               shift and go to state 19
+
+
+state 8
+
+    (9) expression -> function_call .
+
+    *               reduce using rule 9 (expression -> function_call .)
+    [               reduce using rule 9 (expression -> function_call .)
+    ARROW           reduce using rule 9 (expression -> function_call .)
+    LARROW          reduce using rule 9 (expression -> function_call .)
+    RARROW          reduce using rule 9 (expression -> function_call .)
+    FIELD           reduce using rule 9 (expression -> function_call .)
+    NAME            reduce using rule 9 (expression -> function_call .)
+    $end            reduce using rule 9 (expression -> function_call .)
+
+
+state 9
+
+    (0) S' -> main .
+    (2) main -> main . rule
+    (3) rule -> . fieldspec tags
+    (4) rule -> . fieldspec direction fieldspec tags
+    (5) fieldspec -> . expression
+    (6) fieldspec -> . expression *
+    (7) expression -> . field
+    (8) expression -> . validation
+    (9) expression -> . function_call
+    (11) field -> . FIELD
+    (12) validation -> . field : validator_list
+    (13) function_call -> . name ( argument_list )
+    (10) name -> . NAME
+
+    FIELD           shift and go to state 4
+    NAME            shift and go to state 6
+
+    validation                     shift and go to state 1
+    name                           shift and go to state 2
+    fieldspec                      shift and go to state 3
+    rule                           shift and go to state 20
+    field                          shift and go to state 7
+    function_call                  shift and go to state 8
+    expression                     shift and go to state 10
+
+state 10
+
+    (5) fieldspec -> expression .
+    (6) fieldspec -> expression . *
+
+    [               reduce using rule 5 (fieldspec -> expression .)
+    ARROW           reduce using rule 5 (fieldspec -> expression .)
+    LARROW          reduce using rule 5 (fieldspec -> expression .)
+    RARROW          reduce using rule 5 (fieldspec -> expression .)
+    FIELD           reduce using rule 5 (fieldspec -> expression .)
+    NAME            reduce using rule 5 (fieldspec -> expression .)
+    $end            reduce using rule 5 (fieldspec -> expression .)
+    *               shift and go to state 21
+
+
+state 11
+
+    (13) function_call -> name ( . argument_list )
+    (16) argument_list -> . argument
+    (17) argument_list -> . argument_list , argument
+    (24) argument -> . name
+    (25) argument -> . field
+    (26) argument -> . literal
+    (27) argument -> . tuple
+    (28) argument -> . list
+    (29) argument -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 22
+    tuple                          shift and go to state 23
+    list                           shift and go to state 26
+    argument                       shift and go to state 28
+    function_call                  shift and go to state 27
+    field                          shift and go to state 29
+    literal                        shift and go to state 30
+    argument_list                  shift and go to state 31
+
+state 12
+
+    (4) rule -> fieldspec direction . fieldspec tags
+    (5) fieldspec -> . expression
+    (6) fieldspec -> . expression *
+    (7) expression -> . field
+    (8) expression -> . validation
+    (9) expression -> . function_call
+    (11) field -> . FIELD
+    (12) validation -> . field : validator_list
+    (13) function_call -> . name ( argument_list )
+    (10) name -> . NAME
+
+    FIELD           shift and go to state 4
+    NAME            shift and go to state 6
+
+    name                           shift and go to state 2
+    fieldspec                      shift and go to state 35
+    function_call                  shift and go to state 8
+    field                          shift and go to state 7
+    validation                     shift and go to state 1
+    expression                     shift and go to state 10
+
+state 13
+
+    (3) rule -> fieldspec tags .
+
+    FIELD           reduce using rule 3 (rule -> fieldspec tags .)
+    NAME            reduce using rule 3 (rule -> fieldspec tags .)
+    $end            reduce using rule 3 (rule -> fieldspec tags .)
+
+
+state 14
+
+    (38) direction -> RARROW .
+
+    FIELD           reduce using rule 38 (direction -> RARROW .)
+    NAME            reduce using rule 38 (direction -> RARROW .)
+
+
+state 15
+
+    (37) direction -> LARROW .
+
+    FIELD           reduce using rule 37 (direction -> LARROW .)
+    NAME            reduce using rule 37 (direction -> LARROW .)
+
+
+state 16
+
+    (36) direction -> ARROW .
+
+    FIELD           reduce using rule 36 (direction -> ARROW .)
+    NAME            reduce using rule 36 (direction -> ARROW .)
+
+
+state 17
+
+    (39) tags -> [ . tag_list ]
+    (41) tag_list -> . tag
+    (42) tag_list -> . tag_list , tag
+    (43) tag -> . NAME
+    (44) tag -> . ! NAME
+
+    NAME            shift and go to state 37
+    !               shift and go to state 36
+
+    tag_list                       shift and go to state 39
+    tag                            shift and go to state 38
+
+state 18
+
+    (40) tags -> empty .
+
+    FIELD           reduce using rule 40 (tags -> empty .)
+    NAME            reduce using rule 40 (tags -> empty .)
+    $end            reduce using rule 40 (tags -> empty .)
+
+
+state 19
+
+    (12) validation -> field : . validator_list
+    (14) validator_list -> . validator
+    (15) validator_list -> . validator_list , validator
+    (18) validator -> . name
+    (19) validator -> . field
+    (20) validator -> . literal
+    (21) validator -> . tuple
+    (22) validator -> . list
+    (23) validator -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 40
+    tuple                          shift and go to state 41
+    list                           shift and go to state 42
+    function_call                  shift and go to state 43
+    field                          shift and go to state 44
+    literal                        shift and go to state 45
+    validator                      shift and go to state 46
+    validator_list                 shift and go to state 47
+
+state 20
+
+    (2) main -> main rule .
+
+    FIELD           reduce using rule 2 (main -> main rule .)
+    NAME            reduce using rule 2 (main -> main rule .)
+    $end            reduce using rule 2 (main -> main rule .)
+
+
+state 21
+
+    (6) fieldspec -> expression * .
+
+    [               reduce using rule 6 (fieldspec -> expression * .)
+    ARROW           reduce using rule 6 (fieldspec -> expression * .)
+    LARROW          reduce using rule 6 (fieldspec -> expression * .)
+    RARROW          reduce using rule 6 (fieldspec -> expression * .)
+    FIELD           reduce using rule 6 (fieldspec -> expression * .)
+    NAME            reduce using rule 6 (fieldspec -> expression * .)
+    $end            reduce using rule 6 (fieldspec -> expression * .)
+
+
+state 22
+
+    (24) argument -> name .
+    (13) function_call -> name . ( argument_list )
+
+    )               reduce using rule 24 (argument -> name .)
+    ,               reduce using rule 24 (argument -> name .)
+    ]               reduce using rule 24 (argument -> name .)
+    (               shift and go to state 11
+
+
+state 23
+
+    (27) argument -> tuple .
+
+    )               reduce using rule 27 (argument -> tuple .)
+    ,               reduce using rule 27 (argument -> tuple .)
+    ]               reduce using rule 27 (argument -> tuple .)
+
+
+state 24
+
+    (33) tuple -> ( . argument_list )
+    (34) tuple -> ( . argument_list , )
+    (16) argument_list -> . argument
+    (17) argument_list -> . argument_list , argument
+    (24) argument -> . name
+    (25) argument -> . field
+    (26) argument -> . literal
+    (27) argument -> . tuple
+    (28) argument -> . list
+    (29) argument -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 22
+    tuple                          shift and go to state 23
+    list                           shift and go to state 26
+    argument                       shift and go to state 28
+    function_call                  shift and go to state 27
+    field                          shift and go to state 29
+    literal                        shift and go to state 30
+    argument_list                  shift and go to state 48
+
+state 25
+
+    (31) literal -> FLOAT .
+
+    )               reduce using rule 31 (literal -> FLOAT .)
+    ,               reduce using rule 31 (literal -> FLOAT .)
+    ]               reduce using rule 31 (literal -> FLOAT .)
+    *               reduce using rule 31 (literal -> FLOAT .)
+    [               reduce using rule 31 (literal -> FLOAT .)
+    ARROW           reduce using rule 31 (literal -> FLOAT .)
+    LARROW          reduce using rule 31 (literal -> FLOAT .)
+    RARROW          reduce using rule 31 (literal -> FLOAT .)
+    FIELD           reduce using rule 31 (literal -> FLOAT .)
+    NAME            reduce using rule 31 (literal -> FLOAT .)
+    $end            reduce using rule 31 (literal -> FLOAT .)
+
+
+state 26
+
+    (28) argument -> list .
+
+    )               reduce using rule 28 (argument -> list .)
+    ,               reduce using rule 28 (argument -> list .)
+    ]               reduce using rule 28 (argument -> list .)
+
+
+state 27
+
+    (29) argument -> function_call .
+
+    )               reduce using rule 29 (argument -> function_call .)
+    ,               reduce using rule 29 (argument -> function_call .)
+    ]               reduce using rule 29 (argument -> function_call .)
+
+
+state 28
+
+    (16) argument_list -> argument .
+
+    ]               reduce using rule 16 (argument_list -> argument .)
+    ,               reduce using rule 16 (argument_list -> argument .)
+    )               reduce using rule 16 (argument_list -> argument .)
+
+
+state 29
+
+    (25) argument -> field .
+
+    )               reduce using rule 25 (argument -> field .)
+    ,               reduce using rule 25 (argument -> field .)
+    ]               reduce using rule 25 (argument -> field .)
+
+
+state 30
+
+    (26) argument -> literal .
+
+    )               reduce using rule 26 (argument -> literal .)
+    ,               reduce using rule 26 (argument -> literal .)
+    ]               reduce using rule 26 (argument -> literal .)
+
+
+state 31
+
+    (13) function_call -> name ( argument_list . )
+    (17) argument_list -> argument_list . , argument
+
+    )               shift and go to state 49
+    ,               shift and go to state 50
+
+
+state 32
+
+    (30) literal -> INTEGER .
+
+    )               reduce using rule 30 (literal -> INTEGER .)
+    ,               reduce using rule 30 (literal -> INTEGER .)
+    ]               reduce using rule 30 (literal -> INTEGER .)
+    *               reduce using rule 30 (literal -> INTEGER .)
+    [               reduce using rule 30 (literal -> INTEGER .)
+    ARROW           reduce using rule 30 (literal -> INTEGER .)
+    LARROW          reduce using rule 30 (literal -> INTEGER .)
+    RARROW          reduce using rule 30 (literal -> INTEGER .)
+    FIELD           reduce using rule 30 (literal -> INTEGER .)
+    NAME            reduce using rule 30 (literal -> INTEGER .)
+    $end            reduce using rule 30 (literal -> INTEGER .)
+
+
+state 33
+
+    (32) literal -> STRING .
+
+    )               reduce using rule 32 (literal -> STRING .)
+    ,               reduce using rule 32 (literal -> STRING .)
+    ]               reduce using rule 32 (literal -> STRING .)
+    *               reduce using rule 32 (literal -> STRING .)
+    [               reduce using rule 32 (literal -> STRING .)
+    ARROW           reduce using rule 32 (literal -> STRING .)
+    LARROW          reduce using rule 32 (literal -> STRING .)
+    RARROW          reduce using rule 32 (literal -> STRING .)
+    FIELD           reduce using rule 32 (literal -> STRING .)
+    NAME            reduce using rule 32 (literal -> STRING .)
+    $end            reduce using rule 32 (literal -> STRING .)
+
+
+state 34
+
+    (35) list -> [ . argument_list ]
+    (16) argument_list -> . argument
+    (17) argument_list -> . argument_list , argument
+    (24) argument -> . name
+    (25) argument -> . field
+    (26) argument -> . literal
+    (27) argument -> . tuple
+    (28) argument -> . list
+    (29) argument -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 22
+    tuple                          shift and go to state 23
+    list                           shift and go to state 26
+    argument                       shift and go to state 28
+    function_call                  shift and go to state 27
+    field                          shift and go to state 29
+    literal                        shift and go to state 30
+    argument_list                  shift and go to state 51
+
+state 35
+
+    (4) rule -> fieldspec direction fieldspec . tags
+    (39) tags -> . [ tag_list ]
+    (40) tags -> . empty
+    (45) empty -> .
+
+    [               shift and go to state 17
+    FIELD           reduce using rule 45 (empty -> .)
+    NAME            reduce using rule 45 (empty -> .)
+    $end            reduce using rule 45 (empty -> .)
+
+    empty                          shift and go to state 18
+    tags                           shift and go to state 52
+
+state 36
+
+    (44) tag -> ! . NAME
+
+    NAME            shift and go to state 53
+
+
+state 37
+
+    (43) tag -> NAME .
+
+    ]               reduce using rule 43 (tag -> NAME .)
+    ,               reduce using rule 43 (tag -> NAME .)
+
+
+state 38
+
+    (41) tag_list -> tag .
+
+    ]               reduce using rule 41 (tag_list -> tag .)
+    ,               reduce using rule 41 (tag_list -> tag .)
+
+
+state 39
+
+    (39) tags -> [ tag_list . ]
+    (42) tag_list -> tag_list . , tag
+
+    ]               shift and go to state 54
+    ,               shift and go to state 55
+
+
+state 40
+
+    (18) validator -> name .
+    (13) function_call -> name . ( argument_list )
+
+    ,               reduce using rule 18 (validator -> name .)
+    *               reduce using rule 18 (validator -> name .)
+    [               reduce using rule 18 (validator -> name .)
+    ARROW           reduce using rule 18 (validator -> name .)
+    LARROW          reduce using rule 18 (validator -> name .)
+    RARROW          reduce using rule 18 (validator -> name .)
+    FIELD           reduce using rule 18 (validator -> name .)
+    NAME            reduce using rule 18 (validator -> name .)
+    $end            reduce using rule 18 (validator -> name .)
+    (               shift and go to state 11
+
+
+state 41
+
+    (21) validator -> tuple .
+
+    ,               reduce using rule 21 (validator -> tuple .)
+    *               reduce using rule 21 (validator -> tuple .)
+    [               reduce using rule 21 (validator -> tuple .)
+    ARROW           reduce using rule 21 (validator -> tuple .)
+    LARROW          reduce using rule 21 (validator -> tuple .)
+    RARROW          reduce using rule 21 (validator -> tuple .)
+    FIELD           reduce using rule 21 (validator -> tuple .)
+    NAME            reduce using rule 21 (validator -> tuple .)
+    $end            reduce using rule 21 (validator -> tuple .)
+
+
+state 42
+
+    (22) validator -> list .
+
+    ,               reduce using rule 22 (validator -> list .)
+    *               reduce using rule 22 (validator -> list .)
+    [               reduce using rule 22 (validator -> list .)
+    ARROW           reduce using rule 22 (validator -> list .)
+    LARROW          reduce using rule 22 (validator -> list .)
+    RARROW          reduce using rule 22 (validator -> list .)
+    FIELD           reduce using rule 22 (validator -> list .)
+    NAME            reduce using rule 22 (validator -> list .)
+    $end            reduce using rule 22 (validator -> list .)
+
+
+state 43
+
+    (23) validator -> function_call .
+
+    ,               reduce using rule 23 (validator -> function_call .)
+    *               reduce using rule 23 (validator -> function_call .)
+    [               reduce using rule 23 (validator -> function_call .)
+    ARROW           reduce using rule 23 (validator -> function_call .)
+    LARROW          reduce using rule 23 (validator -> function_call .)
+    RARROW          reduce using rule 23 (validator -> function_call .)
+    FIELD           reduce using rule 23 (validator -> function_call .)
+    NAME            reduce using rule 23 (validator -> function_call .)
+    $end            reduce using rule 23 (validator -> function_call .)
+
+
+state 44
+
+    (19) validator -> field .
+
+    ,               reduce using rule 19 (validator -> field .)
+    *               reduce using rule 19 (validator -> field .)
+    [               reduce using rule 19 (validator -> field .)
+    ARROW           reduce using rule 19 (validator -> field .)
+    LARROW          reduce using rule 19 (validator -> field .)
+    RARROW          reduce using rule 19 (validator -> field .)
+    FIELD           reduce using rule 19 (validator -> field .)
+    NAME            reduce using rule 19 (validator -> field .)
+    $end            reduce using rule 19 (validator -> field .)
+
+
+state 45
+
+    (20) validator -> literal .
+
+    ,               reduce using rule 20 (validator -> literal .)
+    *               reduce using rule 20 (validator -> literal .)
+    [               reduce using rule 20 (validator -> literal .)
+    ARROW           reduce using rule 20 (validator -> literal .)
+    LARROW          reduce using rule 20 (validator -> literal .)
+    RARROW          reduce using rule 20 (validator -> literal .)
+    FIELD           reduce using rule 20 (validator -> literal .)
+    NAME            reduce using rule 20 (validator -> literal .)
+    $end            reduce using rule 20 (validator -> literal .)
+
+
+state 46
+
+    (14) validator_list -> validator .
+
+    ,               reduce using rule 14 (validator_list -> validator .)
+    *               reduce using rule 14 (validator_list -> validator .)
+    [               reduce using rule 14 (validator_list -> validator .)
+    ARROW           reduce using rule 14 (validator_list -> validator .)
+    LARROW          reduce using rule 14 (validator_list -> validator .)
+    RARROW          reduce using rule 14 (validator_list -> validator .)
+    FIELD           reduce using rule 14 (validator_list -> validator .)
+    NAME            reduce using rule 14 (validator_list -> validator .)
+    $end            reduce using rule 14 (validator_list -> validator .)
+
+
+state 47
+
+    (12) validation -> field : validator_list .
+    (15) validator_list -> validator_list . , validator
+
+    *               reduce using rule 12 (validation -> field : validator_list .)
+    [               reduce using rule 12 (validation -> field : validator_list .)
+    ARROW           reduce using rule 12 (validation -> field : validator_list .)
+    LARROW          reduce using rule 12 (validation -> field : validator_list .)
+    RARROW          reduce using rule 12 (validation -> field : validator_list .)
+    FIELD           reduce using rule 12 (validation -> field : validator_list .)
+    NAME            reduce using rule 12 (validation -> field : validator_list .)
+    $end            reduce using rule 12 (validation -> field : validator_list .)
+    ,               shift and go to state 56
+
+
+state 48
+
+    (33) tuple -> ( argument_list . )
+    (34) tuple -> ( argument_list . , )
+    (17) argument_list -> argument_list . , argument
+
+    )               shift and go to state 57
+    ,               shift and go to state 58
+
+
+state 49
+
+    (13) function_call -> name ( argument_list ) .
+
+    *               reduce using rule 13 (function_call -> name ( argument_list ) .)
+    [               reduce using rule 13 (function_call -> name ( argument_list ) .)
+    ARROW           reduce using rule 13 (function_call -> name ( argument_list ) .)
+    LARROW          reduce using rule 13 (function_call -> name ( argument_list ) .)
+    RARROW          reduce using rule 13 (function_call -> name ( argument_list ) .)
+    FIELD           reduce using rule 13 (function_call -> name ( argument_list ) .)
+    NAME            reduce using rule 13 (function_call -> name ( argument_list ) .)
+    $end            reduce using rule 13 (function_call -> name ( argument_list ) .)
+    )               reduce using rule 13 (function_call -> name ( argument_list ) .)
+    ,               reduce using rule 13 (function_call -> name ( argument_list ) .)
+    ]               reduce using rule 13 (function_call -> name ( argument_list ) .)
+
+
+state 50
+
+    (17) argument_list -> argument_list , . argument
+    (24) argument -> . name
+    (25) argument -> . field
+    (26) argument -> . literal
+    (27) argument -> . tuple
+    (28) argument -> . list
+    (29) argument -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 22
+    tuple                          shift and go to state 23
+    list                           shift and go to state 26
+    argument                       shift and go to state 59
+    function_call                  shift and go to state 27
+    field                          shift and go to state 29
+    literal                        shift and go to state 30
+
+state 51
+
+    (35) list -> [ argument_list . ]
+    (17) argument_list -> argument_list . , argument
+
+    ]               shift and go to state 60
+    ,               shift and go to state 50
+
+
+state 52
+
+    (4) rule -> fieldspec direction fieldspec tags .
+
+    FIELD           reduce using rule 4 (rule -> fieldspec direction fieldspec tags .)
+    NAME            reduce using rule 4 (rule -> fieldspec direction fieldspec tags .)
+    $end            reduce using rule 4 (rule -> fieldspec direction fieldspec tags .)
+
+
+state 53
+
+    (44) tag -> ! NAME .
+
+    ]               reduce using rule 44 (tag -> ! NAME .)
+    ,               reduce using rule 44 (tag -> ! NAME .)
+
+
+state 54
+
+    (39) tags -> [ tag_list ] .
+
+    FIELD           reduce using rule 39 (tags -> [ tag_list ] .)
+    NAME            reduce using rule 39 (tags -> [ tag_list ] .)
+    $end            reduce using rule 39 (tags -> [ tag_list ] .)
+
+
+state 55
+
+    (42) tag_list -> tag_list , . tag
+    (43) tag -> . NAME
+    (44) tag -> . ! NAME
+
+    NAME            shift and go to state 37
+    !               shift and go to state 36
+
+    tag                            shift and go to state 61
+
+state 56
+
+    (15) validator_list -> validator_list , . validator
+    (18) validator -> . name
+    (19) validator -> . field
+    (20) validator -> . literal
+    (21) validator -> . tuple
+    (22) validator -> . list
+    (23) validator -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 40
+    tuple                          shift and go to state 41
+    list                           shift and go to state 42
+    function_call                  shift and go to state 43
+    field                          shift and go to state 44
+    literal                        shift and go to state 45
+    validator                      shift and go to state 62
+
+state 57
+
+    (33) tuple -> ( argument_list ) .
+
+    )               reduce using rule 33 (tuple -> ( argument_list ) .)
+    ,               reduce using rule 33 (tuple -> ( argument_list ) .)
+    ]               reduce using rule 33 (tuple -> ( argument_list ) .)
+    *               reduce using rule 33 (tuple -> ( argument_list ) .)
+    [               reduce using rule 33 (tuple -> ( argument_list ) .)
+    ARROW           reduce using rule 33 (tuple -> ( argument_list ) .)
+    LARROW          reduce using rule 33 (tuple -> ( argument_list ) .)
+    RARROW          reduce using rule 33 (tuple -> ( argument_list ) .)
+    FIELD           reduce using rule 33 (tuple -> ( argument_list ) .)
+    NAME            reduce using rule 33 (tuple -> ( argument_list ) .)
+    $end            reduce using rule 33 (tuple -> ( argument_list ) .)
+
+
+state 58
+
+    (34) tuple -> ( argument_list , . )
+    (17) argument_list -> argument_list , . argument
+    (24) argument -> . name
+    (25) argument -> . field
+    (26) argument -> . literal
+    (27) argument -> . tuple
+    (28) argument -> . list
+    (29) argument -> . function_call
+    (10) name -> . NAME
+    (11) field -> . FIELD
+    (30) literal -> . INTEGER
+    (31) literal -> . FLOAT
+    (32) literal -> . STRING
+    (33) tuple -> . ( argument_list )
+    (34) tuple -> . ( argument_list , )
+    (35) list -> . [ argument_list ]
+    (13) function_call -> . name ( argument_list )
+
+    )               shift and go to state 63
+    NAME            shift and go to state 6
+    FIELD           shift and go to state 4
+    INTEGER         shift and go to state 32
+    FLOAT           shift and go to state 25
+    STRING          shift and go to state 33
+    (               shift and go to state 24
+    [               shift and go to state 34
+
+    name                           shift and go to state 22
+    tuple                          shift and go to state 23
+    list                           shift and go to state 26
+    argument                       shift and go to state 59
+    function_call                  shift and go to state 27
+    field                          shift and go to state 29
+    literal                        shift and go to state 30
+
+state 59
+
+    (17) argument_list -> argument_list , argument .
+
+    ]               reduce using rule 17 (argument_list -> argument_list , argument .)
+    ,               reduce using rule 17 (argument_list -> argument_list , argument .)
+    )               reduce using rule 17 (argument_list -> argument_list , argument .)
+
+
+state 60
+
+    (35) list -> [ argument_list ] .
+
+    )               reduce using rule 35 (list -> [ argument_list ] .)
+    ,               reduce using rule 35 (list -> [ argument_list ] .)
+    ]               reduce using rule 35 (list -> [ argument_list ] .)
+    *               reduce using rule 35 (list -> [ argument_list ] .)
+    [               reduce using rule 35 (list -> [ argument_list ] .)
+    ARROW           reduce using rule 35 (list -> [ argument_list ] .)
+    LARROW          reduce using rule 35 (list -> [ argument_list ] .)
+    RARROW          reduce using rule 35 (list -> [ argument_list ] .)
+    FIELD           reduce using rule 35 (list -> [ argument_list ] .)
+    NAME            reduce using rule 35 (list -> [ argument_list ] .)
+    $end            reduce using rule 35 (list -> [ argument_list ] .)
+
+
+state 61
+
+    (42) tag_list -> tag_list , tag .
+
+    ]               reduce using rule 42 (tag_list -> tag_list , tag .)
+    ,               reduce using rule 42 (tag_list -> tag_list , tag .)
+
+
+state 62
+
+    (15) validator_list -> validator_list , validator .
+
+    ,               reduce using rule 15 (validator_list -> validator_list , validator .)
+    *               reduce using rule 15 (validator_list -> validator_list , validator .)
+    [               reduce using rule 15 (validator_list -> validator_list , validator .)
+    ARROW           reduce using rule 15 (validator_list -> validator_list , validator .)
+    LARROW          reduce using rule 15 (validator_list -> validator_list , validator .)
+    RARROW          reduce using rule 15 (validator_list -> validator_list , validator .)
+    FIELD           reduce using rule 15 (validator_list -> validator_list , validator .)
+    NAME            reduce using rule 15 (validator_list -> validator_list , validator .)
+    $end            reduce using rule 15 (validator_list -> validator_list , validator .)
+
+
+state 63
+
+    (34) tuple -> ( argument_list , ) .
+
+    )               reduce using rule 34 (tuple -> ( argument_list , ) .)
+    ,               reduce using rule 34 (tuple -> ( argument_list , ) .)
+    ]               reduce using rule 34 (tuple -> ( argument_list , ) .)
+    *               reduce using rule 34 (tuple -> ( argument_list , ) .)
+    [               reduce using rule 34 (tuple -> ( argument_list , ) .)
+    ARROW           reduce using rule 34 (tuple -> ( argument_list , ) .)
+    LARROW          reduce using rule 34 (tuple -> ( argument_list , ) .)
+    RARROW          reduce using rule 34 (tuple -> ( argument_list , ) .)
+    FIELD           reduce using rule 34 (tuple -> ( argument_list , ) .)
+    NAME            reduce using rule 34 (tuple -> ( argument_list , ) .)
+    $end            reduce using rule 34 (tuple -> ( argument_list , ) .)
+
