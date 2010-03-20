@@ -45,5 +45,6 @@ setup(
     package_dir = {'': 'lib'},
     packages = ['argproc', 'argproc.test'],
     test_suite = 'nose.collector',
-    cmdclass = { 'gentab': gentab }
+    cmdclass = { 'gentab': gentab },
+    install_requires = ['ply >= 3.3']
 )
