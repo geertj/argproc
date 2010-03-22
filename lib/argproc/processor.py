@@ -15,10 +15,11 @@ from argproc.parser import RuleParser
 class ArgumentProcessor(object):
     """Rule-based arguments processor."""
 
-    def __init__(self, namespace=None):
+    def __init__(self, namespace=None, ignore_none=False):
         if namespace is None:
             namespace = self._get_caller_namespace(2)
         self.namespace = namespace
+        self.ignore_none = ignore_none
         self._rules = []
         self._parser = RuleParser()
 
@@ -51,6 +52,8 @@ class ArgumentProcessor(object):
                             fields=missing, rule=rule.tostring())
             return result
         ivalue = ispec.eval(args, self.namespace)
+        if self.ignore_none and ivalue is None:
+            return result
         ofields = ospec.assigned_fields()
         if len(ofields) == 1:
             result[ofields[0]] = ivalue
