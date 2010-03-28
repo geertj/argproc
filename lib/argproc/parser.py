@@ -341,6 +341,7 @@ class RuleParser(Parser):
                     | tuple
                     | list
                     | function_call
+                    | validation
         """
         p[0] = p[1]
 

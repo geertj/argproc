@@ -143,6 +143,11 @@ class TestProcessor(object):
         assert proc.process({'left': 1}) == {'right': 1}
         assert_raises(Error, proc.process, {'left': 3})
 
+    def test_function_with_validator(self):
+        proc = ArgProc()
+        proc.rule('int($left:int) => $right')
+        assert proc.process({'left': 1}) == {'right': 1}
+
     def test_local_name(self):
         verify = 'test'
         proc = ArgProc()
