@@ -83,6 +83,36 @@ class TestProcessor(object):
         right = proc.process({'left1': 1, 'left2': 1})
         assert right == {'right': 2 }
 
+    def test_function_negative_int_argument(self):
+        proc = ArgProc()
+        proc.rule('max($left, -2) => $right')
+        assert proc.process({'left': -3}) == {'right': -2}
+
+    def test_function_float_argument(self):
+        proc = ArgProc()
+        proc.rule('max($left, 2.0) => $right')
+        assert proc.process({'left': 1.0}) == {'right': 2.0}
+
+    def test_function_negative_float_argument(self):
+        proc = ArgProc()
+        proc.rule('max($left, -2.0) => $right')
+        assert proc.process({'left': -3.0}) == {'right': -2.0}
+
+    def test_function_true_argument(self):
+        proc = ArgProc()
+        proc.rule('max($left, True) => $right')
+        assert proc.process({'left': False}) == {'right': True}
+
+    def test_function_false_argument(self):
+        proc = ArgProc()
+        proc.rule('min($left, False) => $right')
+        assert proc.process({'left': True}) == {'right': False}
+
+    def test_function_none_argument(self):
+        proc = ArgProc()
+        proc.rule('min($left, None) => $right')
+        assert proc.process({'left': False}) == {'right': None}
+
     def test_validator_callable(self):
         proc = ArgProc()
         proc.rule('$left:int => $right')

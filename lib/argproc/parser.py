@@ -242,17 +242,20 @@ class RuleParser(Parser):
     exception = ParseError
 
     tokens = ('NAME', 'FIELD', 'ARROW', 'LARROW', 'RARROW', 'INTEGER',
-              'FLOAT', 'STRING')
+              'FLOAT', 'STRING', 'TRUE', 'FALSE', 'NONE')
     literals = ('(', ')', '[', ']', ',', ':', '*', '!')
 
     t_NAME = '[a-zA-Z_][a-zA-Z0-9_]*'
     t_FIELD = r'\$[a-zA-Z_][a-zA-Z0-9_]*'
-    t_INTEGER = '[0-9]+'
-    t_FLOAT = r'[0-9]+\.[0-9]+'
+    t_INTEGER = '-?[0-9]+'
+    t_FLOAT = r'-?[0-9]+\.[0-9]+'
     t_STRING = '\'[^\']+\'|"[^"]+"'
     t_ARROW = '<=>'
     t_LARROW = '<='
     t_RARROW = '=>'
+    t_TRUE = 'True'
+    t_FALSE = 'False'
+    t_NONE = 'None'
     t_ignore = ' \t\n'
 
     def t_COMMENT(self, t):
@@ -349,6 +352,9 @@ class RuleParser(Parser):
         """literal : INTEGER
                    | FLOAT
                    | STRING
+                   | TRUE
+                   | FALSE
+                   | NONE
         """
         p[0] = Literal(eval(p[1]))
 
