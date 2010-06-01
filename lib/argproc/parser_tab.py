@@ -5,9 +5,9 @@ _tabversion = '3.2'
 
 _lr_method = 'LALR'
 
-_lr_signature = "/'\xe1O\xdc\x8as\x08\x99\xb2\xa8\t0\xaa\x8a\x93"
+_lr_signature = '9]\x00?\xea\xfa\xa7\x90\xacG\x88>P:\xdew'
     
-_lr_action_items = {'!':([17,59,],[40,40,]),'NONE':([11,19,26,33,54,60,62,],[25,25,25,25,25,25,25,]),'FLOAT':([11,19,26,33,54,60,62,],[36,36,36,36,36,36,36,]),'FALSE':([11,19,26,33,54,60,62,],[34,34,34,34,34,34,34,]),'NAME':([0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,24,25,26,30,31,33,34,36,39,40,44,45,46,47,48,49,50,51,53,54,56,58,59,60,61,62,64,66,67,],[6,-8,-49,-11,-1,-10,-7,-9,6,-5,6,6,-3,-42,-41,-40,41,-44,6,-2,-6,-34,-36,6,-31,-33,6,-35,-32,-49,57,-23,-19,-20,-21,-12,-18,-22,-14,-13,6,-4,-43,41,6,-37,6,-39,-15,-38,]),'LARROW':([1,3,4,6,7,8,10,21,24,25,30,31,34,36,44,45,46,47,48,49,50,51,53,61,64,66,67,],[-8,15,-11,-10,-7,-9,-5,-6,-34,-36,-31,-33,-35,-32,-23,-19,-20,-21,-12,-18,-22,-14,-13,-37,-39,-15,-38,]),')':([4,6,22,23,24,25,27,28,29,30,31,32,34,35,36,37,38,44,45,46,47,48,49,50,51,52,53,61,62,63,64,66,67,],[-11,-10,-16,-29,-34,-36,-25,-26,53,-31,-33,-27,-35,-24,-32,-28,-30,-23,-19,-20,-21,-12,-18,-22,-14,61,-13,-37,67,-17,-39,-15,-38,]),'(':([2,6,11,19,26,33,35,49,54,60,62,],[11,-10,26,26,26,26,11,11,26,26,26,]),'*':([1,4,6,7,8,10,24,25,30,31,34,36,44,45,46,47,48,49,50,51,53,61,64,66,67,],[-8,-11,-10,-7,-9,21,-34,-36,-31,-33,-35,-32,-23,-19,-20,-21,-12,-18,-22,-14,-13,-37,-39,-15,-38,]),',':([4,6,22,23,24,25,27,28,29,30,31,32,34,35,36,37,38,41,42,43,44,45,46,47,48,49,50,51,52,53,55,57,61,63,64,65,66,67,],[-11,-10,-16,-29,-34,-36,-25,-26,54,-31,-33,-27,-35,-24,-32,-28,-30,-47,-45,59,-23,-19,-20,-21,60,-18,-22,-14,62,-13,54,-48,-37,-17,-39,-46,-15,-38,]),'RARROW':([1,3,4,6,7,8,10,21,24,25,30,31,34,36,44,45,46,47,48,49,50,51,53,61,64,66,67,],[-8,14,-11,-10,-7,-9,-5,-6,-34,-36,-31,-33,-35,-32,-23,-19,-20,-21,-12,-18,-22,-14,-13,-37,-39,-15,-38,]),'FIELD':([0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20,21,24,25,26,30,31,33,34,36,39,44,45,46,47,48,49,50,51,53,54,56,58,60,61,62,64,66,67,],[4,-8,-49,-11,-1,-10,-7,-9,4,-5,4,4,-3,-42,-41,-40,-44,4,-2,-6,-34,-36,4,-31,-33,4,-35,-32,-49,-23,-19,-20,-21,-12,-18,-22,-14,-13,4,-4,-43,4,-37,4,-39,-15,-38,]),'STRING':([11,19,26,33,54,60,62,],[31,31,31,31,31,31,31,]),'ARROW':([1,3,4,6,7,8,10,21,24,25,30,31,34,36,44,45,46,47,48,49,50,51,53,61,64,66,67,],[-8,16,-11,-10,-7,-9,-5,-6,-34,-36,-31,-33,-35,-32,-23,-19,-20,-21,-12,-18,-22,-14,-13,-37,-39,-15,-38,]),'INTEGER':([11,19,26,33,54,60,62,],[30,30,30,30,30,30,30,]),'[':([1,3,4,6,7,8,10,11,19,21,24,25,26,30,31,33,34,36,39,44,45,46,47,48,49,50,51,53,54,60,61,62,64,66,67,],[-8,17,-11,-10,-7,-9,-5,33,33,-6,-34,-36,33,-31,-33,33,-35,-32,17,-23,-19,-20,-21,-12,-18,-22,-14,-13,33,33,-37,33,-39,-15,-38,]),':':([4,7,27,],[-11,19,19,]),']':([4,6,22,23,24,25,27,28,30,31,32,34,35,36,37,38,41,42,43,44,45,46,47,48,49,50,51,53,55,57,61,63,64,65,66,67,],[-11,-10,-16,-29,-34,-36,-25,-26,-31,-33,-27,-35,-24,-32,-28,-30,-47,-45,58,-23,-19,-20,-21,-12,-18,-22,-14,-13,64,-48,-37,-17,-39,-46,-15,-38,]),'TRUE':([11,19,26,33,54,60,62,],[24,24,24,24,24,24,24,]),'$end':([1,3,4,5,6,7,8,9,10,13,18,20,21,24,25,30,31,34,36,39,44,45,46,47,48,49,50,51,53,56,58,61,64,66,67,],[-8,-49,-11,-1,-10,-7,-9,0,-5,-3,-44,-2,-6,-34,-36,-31,-33,-35,-32,-49,-23,-19,-20,-21,-12,-18,-22,-14,-13,-4,-43,-37,-39,-15,-38,]),}
+_lr_action_items = {'!':([17,58,],[40,40,]),'NONE':([11,19,26,33,53,60,],[25,25,25,25,25,25,]),'FLOAT':([11,19,26,33,53,60,],[36,36,36,36,36,36,]),'FALSE':([11,19,26,33,53,60,],[34,34,34,34,34,34,]),'NAME':([0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,24,25,26,30,31,33,34,36,39,40,44,45,46,47,48,49,50,52,53,55,57,58,59,60,62,64,],[6,-8,-47,-11,-1,-10,-7,-9,6,-5,6,6,-3,-40,-39,-38,41,-42,6,-2,-6,-32,-34,6,-29,-31,6,-33,-30,-47,56,-21,-17,-18,-19,-16,-20,-12,-13,6,-4,-41,41,-35,6,-37,-36,]),'LARROW':([1,3,4,6,7,8,10,21,24,25,30,31,34,36,44,45,46,47,48,49,50,52,59,62,64,],[-8,15,-11,-10,-7,-9,-5,-6,-32,-34,-29,-31,-33,-30,-21,-17,-18,-19,-16,-20,-12,-13,-35,-37,-36,]),')':([4,6,22,23,24,25,27,28,29,30,31,32,34,35,36,37,38,44,45,46,47,48,49,50,51,52,59,60,61,62,64,],[-11,-10,-14,-27,-32,-34,-23,-24,52,-29,-31,-25,-33,-22,-30,-26,-28,-21,-17,-18,-19,-16,-20,-12,59,-13,-35,64,-15,-37,-36,]),'(':([2,6,11,19,26,33,35,48,53,60,],[11,-10,26,26,26,26,11,11,26,26,]),'*':([1,4,6,7,8,10,24,25,30,31,34,36,44,45,46,47,48,49,50,52,59,62,64,],[-8,-11,-10,-7,-9,21,-32,-34,-29,-31,-33,-30,-21,-17,-18,-19,-16,-20,-12,-13,-35,-37,-36,]),',':([4,6,22,23,24,25,27,28,29,30,31,32,34,35,36,37,38,41,42,43,44,45,46,47,48,49,50,51,52,54,56,59,61,62,63,64,],[-11,-10,-14,-27,-32,-34,-23,-24,53,-29,-31,-25,-33,-22,-30,-26,-28,-45,-43,58,-21,-17,-18,-19,-16,-20,-12,60,-13,53,-46,-35,-15,-37,-44,-36,]),'RARROW':([1,3,4,6,7,8,10,21,24,25,30,31,34,36,44,45,46,47,48,49,50,52,59,62,64,],[-8,14,-11,-10,-7,-9,-5,-6,-32,-34,-29,-31,-33,-30,-21,-17,-18,-19,-16,-20,-12,-13,-35,-37,-36,]),'FIELD':([0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20,21,24,25,26,30,31,33,34,36,39,44,45,46,47,48,49,50,52,53,55,57,59,60,62,64,],[4,-8,-47,-11,-1,-10,-7,-9,4,-5,4,4,-3,-40,-39,-38,-42,4,-2,-6,-32,-34,4,-29,-31,4,-33,-30,-47,-21,-17,-18,-19,-16,-20,-12,-13,4,-4,-41,-35,4,-37,-36,]),'STRING':([11,19,26,33,53,60,],[31,31,31,31,31,31,]),'ARROW':([1,3,4,6,7,8,10,21,24,25,30,31,34,36,44,45,46,47,48,49,50,52,59,62,64,],[-8,16,-11,-10,-7,-9,-5,-6,-32,-34,-29,-31,-33,-30,-21,-17,-18,-19,-16,-20,-12,-13,-35,-37,-36,]),'INTEGER':([11,19,26,33,53,60,],[30,30,30,30,30,30,]),'[':([1,3,4,6,7,8,10,11,19,21,24,25,26,30,31,33,34,36,39,44,45,46,47,48,49,50,52,53,59,60,62,64,],[-8,17,-11,-10,-7,-9,-5,33,33,-6,-32,-34,33,-29,-31,33,-33,-30,17,-21,-17,-18,-19,-16,-20,-12,-13,33,-35,33,-37,-36,]),':':([4,7,27,],[-11,19,19,]),']':([4,6,22,23,24,25,27,28,30,31,32,34,35,36,37,38,41,42,43,44,45,46,47,48,49,50,52,54,56,59,61,62,63,64,],[-11,-10,-14,-27,-32,-34,-23,-24,-29,-31,-25,-33,-22,-30,-26,-28,-45,-43,57,-21,-17,-18,-19,-16,-20,-12,-13,62,-46,-35,-15,-37,-44,-36,]),'TRUE':([11,19,26,33,53,60,],[24,24,24,24,24,24,]),'$end':([1,3,4,5,6,7,8,9,10,13,18,20,21,24,25,30,31,34,36,39,44,45,46,47,48,49,50,52,55,57,59,62,64,],[-8,-47,-11,-1,-10,-7,-9,0,-5,-3,-42,-2,-6,-32,-34,-29,-31,-33,-30,-47,-21,-17,-18,-19,-16,-20,-12,-13,-4,-41,-35,-37,-36,]),}
 
 _lr_action = { }
 for _k, _v in _lr_action_items.items():
@@ -16,7 +16,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'direction':([3,],[12,]),'validation':([0,9,11,12,26,33,54,62,],[1,1,38,1,38,38,38,38,]),'name':([0,9,11,12,19,26,33,54,60,62,],[2,2,35,2,49,35,35,35,49,35,]),'tags':([3,39,],[13,56,]),'fieldspec':([0,9,12,],[3,3,39,]),'tuple':([11,19,26,33,54,60,62,],[32,47,32,32,32,47,32,]),'list':([11,19,26,33,54,60,62,],[37,50,37,37,37,50,37,]),'argument':([11,26,33,54,62,],[22,22,22,63,63,]),'function_call':([0,9,11,12,19,26,33,54,60,62,],[8,8,23,8,44,23,23,23,44,23,]),'field':([0,9,11,12,19,26,33,54,60,62,],[7,7,27,7,45,27,27,27,45,27,]),'literal':([11,19,26,33,54,60,62,],[28,46,28,28,28,46,28,]),'tag':([17,59,],[42,65,]),'tag_list':([17,],[43,]),'rule':([0,9,],[5,20,]),'validator_list':([19,],[48,]),'main':([0,],[9,]),'expression':([0,9,12,],[10,10,10,]),'validator':([19,60,],[51,66,]),'empty':([3,39,],[18,18,]),'argument_list':([11,26,33,],[29,52,55,]),}
+_lr_goto_items = {'direction':([3,],[12,]),'validation':([0,9,11,12,26,33,53,60,],[1,1,38,1,38,38,38,38,]),'name':([0,9,11,12,19,26,33,53,60,],[2,2,35,2,48,35,35,35,35,]),'tags':([3,39,],[13,55,]),'fieldspec':([0,9,12,],[3,3,39,]),'tuple':([11,19,26,33,53,60,],[32,47,32,32,32,32,]),'list':([11,19,26,33,53,60,],[37,49,37,37,37,37,]),'argument':([11,26,33,53,60,],[22,22,22,61,61,]),'rule':([0,9,],[5,20,]),'field':([0,9,11,12,19,26,33,53,60,],[7,7,27,7,45,27,27,27,27,]),'literal':([11,19,26,33,53,60,],[28,46,28,28,28,28,]),'tag':([17,58,],[42,63,]),'tag_list':([17,],[43,]),'function_call':([0,9,11,12,19,26,33,53,60,],[8,8,23,8,44,23,23,23,23,]),'main':([0,],[9,]),'expression':([0,9,12,],[10,10,10,]),'validator':([19,],[50,]),'empty':([3,39,],[18,18,]),'argument_list':([11,26,33,],[29,51,54,]),}
 
 _lr_goto = { }
 for _k, _v in _lr_goto_items.items():
@@ -26,53 +26,51 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> main","S'",1,None,None,None),
-  ('main -> rule','main',1,'p_main','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',266),
-  ('main -> main rule','main',2,'p_main','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',267),
-  ('rule -> fieldspec tags','rule',2,'p_rule','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',275),
-  ('rule -> fieldspec direction fieldspec tags','rule',4,'p_rule','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',276),
-  ('fieldspec -> expression','fieldspec',1,'p_fieldspec','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',284),
-  ('fieldspec -> expression *','fieldspec',2,'p_fieldspec','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',285),
-  ('expression -> field','expression',1,'p_expression','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',290),
-  ('expression -> validation','expression',1,'p_expression','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',291),
-  ('expression -> function_call','expression',1,'p_expression','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',292),
-  ('name -> NAME','name',1,'p_name','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',297),
-  ('field -> FIELD','field',1,'p_field','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',301),
-  ('validation -> field : validator_list','validation',3,'p_validation','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',305),
-  ('function_call -> name ( argument_list )','function_call',4,'p_function_call','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',309),
-  ('validator_list -> validator','validator_list',1,'p_validator_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',313),
-  ('validator_list -> validator_list , validator','validator_list',3,'p_validator_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',314),
-  ('argument_list -> argument','argument_list',1,'p_argument_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',322),
-  ('argument_list -> argument_list , argument','argument_list',3,'p_argument_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',323),
-  ('validator -> name','validator',1,'p_validator','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',331),
-  ('validator -> field','validator',1,'p_validator','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',332),
-  ('validator -> literal','validator',1,'p_validator','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',333),
-  ('validator -> tuple','validator',1,'p_validator','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',334),
-  ('validator -> list','validator',1,'p_validator','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',335),
-  ('validator -> function_call','validator',1,'p_validator','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',336),
-  ('argument -> name','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',341),
-  ('argument -> field','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',342),
-  ('argument -> literal','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',343),
-  ('argument -> tuple','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',344),
-  ('argument -> list','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',345),
-  ('argument -> function_call','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',346),
-  ('argument -> validation','argument',1,'p_argument','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',347),
-  ('literal -> INTEGER','literal',1,'p_literal','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',352),
-  ('literal -> FLOAT','literal',1,'p_literal','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',353),
-  ('literal -> STRING','literal',1,'p_literal','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',354),
-  ('literal -> TRUE','literal',1,'p_literal','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',355),
-  ('literal -> FALSE','literal',1,'p_literal','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',356),
-  ('literal -> NONE','literal',1,'p_literal','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',357),
-  ('tuple -> ( argument_list )','tuple',3,'p_tuple','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',362),
-  ('tuple -> ( argument_list , )','tuple',4,'p_tuple','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',363),
-  ('list -> [ argument_list ]','list',3,'p_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',369),
-  ('direction -> ARROW','direction',1,'p_direction','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',373),
-  ('direction -> LARROW','direction',1,'p_direction','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',374),
-  ('direction -> RARROW','direction',1,'p_direction','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',375),
-  ('tags -> [ tag_list ]','tags',3,'p_tags','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',380),
-  ('tags -> empty','tags',1,'p_tags','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',381),
-  ('tag_list -> tag','tag_list',1,'p_tag_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',387),
-  ('tag_list -> tag_list , tag','tag_list',3,'p_tag_list','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',388),
-  ('tag -> NAME','tag',1,'p_tag','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',395),
-  ('tag -> ! NAME','tag',2,'p_tag','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',396),
-  ('empty -> <empty>','empty',0,'p_empty','c:\\users\\administrator\\documents\\argproc\\lib\\argproc\\parser.py',404),
+  ('main -> rule','main',1,'p_main','/home/geertj/Projects/argproc/lib/argproc/parser.py',264),
+  ('main -> main rule','main',2,'p_main','/home/geertj/Projects/argproc/lib/argproc/parser.py',265),
+  ('rule -> fieldspec tags','rule',2,'p_rule','/home/geertj/Projects/argproc/lib/argproc/parser.py',273),
+  ('rule -> fieldspec direction fieldspec tags','rule',4,'p_rule','/home/geertj/Projects/argproc/lib/argproc/parser.py',274),
+  ('fieldspec -> expression','fieldspec',1,'p_fieldspec','/home/geertj/Projects/argproc/lib/argproc/parser.py',282),
+  ('fieldspec -> expression *','fieldspec',2,'p_fieldspec','/home/geertj/Projects/argproc/lib/argproc/parser.py',283),
+  ('expression -> field','expression',1,'p_expression','/home/geertj/Projects/argproc/lib/argproc/parser.py',288),
+  ('expression -> validation','expression',1,'p_expression','/home/geertj/Projects/argproc/lib/argproc/parser.py',289),
+  ('expression -> function_call','expression',1,'p_expression','/home/geertj/Projects/argproc/lib/argproc/parser.py',290),
+  ('name -> NAME','name',1,'p_name','/home/geertj/Projects/argproc/lib/argproc/parser.py',295),
+  ('field -> FIELD','field',1,'p_field','/home/geertj/Projects/argproc/lib/argproc/parser.py',299),
+  ('validation -> field : validator','validation',3,'p_validation','/home/geertj/Projects/argproc/lib/argproc/parser.py',303),
+  ('function_call -> name ( argument_list )','function_call',4,'p_function_call','/home/geertj/Projects/argproc/lib/argproc/parser.py',307),
+  ('argument_list -> argument','argument_list',1,'p_argument_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',311),
+  ('argument_list -> argument_list , argument','argument_list',3,'p_argument_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',312),
+  ('validator -> name','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',320),
+  ('validator -> field','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',321),
+  ('validator -> literal','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',322),
+  ('validator -> tuple','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',323),
+  ('validator -> list','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',324),
+  ('validator -> function_call','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',325),
+  ('argument -> name','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',330),
+  ('argument -> field','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',331),
+  ('argument -> literal','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',332),
+  ('argument -> tuple','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',333),
+  ('argument -> list','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',334),
+  ('argument -> function_call','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',335),
+  ('argument -> validation','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',336),
+  ('literal -> INTEGER','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',341),
+  ('literal -> FLOAT','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',342),
+  ('literal -> STRING','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',343),
+  ('literal -> TRUE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',344),
+  ('literal -> FALSE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',345),
+  ('literal -> NONE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',346),
+  ('tuple -> ( argument_list )','tuple',3,'p_tuple','/home/geertj/Projects/argproc/lib/argproc/parser.py',351),
+  ('tuple -> ( argument_list , )','tuple',4,'p_tuple','/home/geertj/Projects/argproc/lib/argproc/parser.py',352),
+  ('list -> [ argument_list ]','list',3,'p_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',358),
+  ('direction -> ARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',362),
+  ('direction -> LARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',363),
+  ('direction -> RARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',364),
+  ('tags -> [ tag_list ]','tags',3,'p_tags','/home/geertj/Projects/argproc/lib/argproc/parser.py',369),
+  ('tags -> empty','tags',1,'p_tags','/home/geertj/Projects/argproc/lib/argproc/parser.py',370),
+  ('tag_list -> tag','tag_list',1,'p_tag_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',376),
+  ('tag_list -> tag_list , tag','tag_list',3,'p_tag_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',377),
+  ('tag -> NAME','tag',1,'p_tag','/home/geertj/Projects/argproc/lib/argproc/parser.py',384),
+  ('tag -> ! NAME','tag',2,'p_tag','/home/geertj/Projects/argproc/lib/argproc/parser.py',385),
+  ('empty -> <empty>','empty',0,'p_empty','/home/geertj/Projects/argproc/lib/argproc/parser.py',393),
 ]

@@ -135,30 +135,28 @@ class Field(Node):
 
 class Validation(Node):
 
-    def __init__(self, name, validators):
-        super(Validation, self).__init__([name])
-        self.children += validators
+    def __init__(self, name, validator):
+        super(Validation, self).__init__([name, validator])
 
     def eval(self, args, globals):
         name = self[0].tostring()
         value = self[0].eval(args, globals)
-        for val in self[1:]:
-            validator = val.eval(args, globals)
-            if callable(validator):
-                try:
-                    validator(value)
-                except ValueError, err:
-                    raise Error('Could not validate field "%s" (%s)' %
-                                (name, str(err)), fields=[name])
-            elif hasattr(validator, '__contains__') and not \
-                        isinstance(validator, basestring):
-                if value not in validator:
-                    raise Error('Could not validate field "%s" (value not in '
-                                'reference values)' % name, fields=[name])
-            else:
-                if value != validator:
-                    raise Error('Could not validate field "%s" (not equal to '
-                                'reference value)'% name, fields=[name])
+        validator = self[1].eval(args, globals)
+        if callable(validator):
+            try:
+                validator(value)
+            except ValueError, err:
+                raise Error('Could not validate field "%s" (%s)' %
+                            (name, str(err)), fields=[name])
+        elif hasattr(validator, '__contains__') and not \
+                    isinstance(validator, basestring):
+            if value not in validator:
+                raise Error('Could not validate field "%s" (value not in '
+                            'reference values)' % name, fields=[name])
+        else:
+            if value != validator:
+                raise Error('Could not validate field "%s" (not equal to '
+                            'reference value)'% name, fields=[name])
         return value
 
     def assigned_fields(self):
@@ -302,21 +300,12 @@ class RuleParser(Parser):
         p[0] = Field(p[1])
 
     def p_validation(self, p):
-        """validation : field ':' validator_list"""
+        """validation : field ':' validator"""
         p[0] = Validation(p[1], p[3])
 
     def p_function_call(self, p):
         """function_call : name '(' argument_list ')'"""
         p[0] = FunctionCall(p[1], p[3])
-
-    def p_validator_list(self, p):
-        """validator_list : validator
-                          | validator_list ',' validator
-        """
-        if len(p) == 2:
-            p[0] = [p[1]]
-        else:
-            p[0] = p[1] + [p[3]]
 
     def p_argument_list(self, p):
         """argument_list : argument
