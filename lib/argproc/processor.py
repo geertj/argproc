@@ -46,7 +46,7 @@ class ArgumentProcessor(object):
             if field not in args:
                 missing.append(field)
         if missing:
-            if ispec.mandatory:
+            if rule.mandatory:
                 raise Error('Required %s fields missing: %s' % 
                             (ispec.side, ', '.join(missing)),
                             fields=missing, rule=rule.tostring())

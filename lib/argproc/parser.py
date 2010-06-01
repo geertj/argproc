@@ -15,12 +15,13 @@ from argproc.plyparse import Parser
 
 class Rule(object):
 
-    def __init__(self, left, direction, right, tags):
+    def __init__(self, left, direction, right, mandatory, tags):
         self.left = left
         self.left.side = 'left'
         self.direction = direction
         self.right = right
         self.right.side = 'right'
+        self.mandatory = mandatory
         self.tags = tags
 
     def tostring(self):
@@ -30,6 +31,8 @@ class Rule(object):
             s = left
         else:
             s = '%s %s %s' % (left, self.direction, right)
+        if self.mandatory:
+            s += ' *'
         if self.tags:
             s += ' [%s]' % (','.join((tag.tostring() for tag in self.tags)))
         return s
@@ -82,22 +85,6 @@ class Node(object):
     def referenced_fields(self):
         """All fields that are (recursively) referenced by this node."""
         return sum((child.referenced_fields() for child in self), [])
-
-
-class FieldSpec(Node):
-
-    def __init__(self, expression, mandatory):
-        super(FieldSpec, self).__init__([expression])
-        self.mandatory = mandatory
-
-    def eval(self, args, globals):
-        return self.children[0].eval(args, globals)
-
-    def tostring(self):
-        s = self.children[0].tostring()
-        if self.mandatory:
-            s += ' *'
-        return s
 
 
 class Name(Node):
@@ -270,19 +257,13 @@ class RuleParser(Parser):
             p[0] = p[1] + [p[2]]
 
     def p_rule(self, p):
-        """rule : fieldspec tags
-                | fieldspec direction fieldspec tags"""
+        """rule : expression mandatory tags
+                | expression direction expression mandatory tags"""
 
         if len(p) == 3:
-            p[0] = Rule(p[1], '<=>', p[1], p[2])
+            p[0] = Rule(p[1], '<=>', p[1], p[2], p[3])
         else:
-            p[0] = Rule(p[1], p[2], p[3], p[4])
-
-    def p_fieldspec(self, p):
-        """fieldspec : expression
-                     | expression '*'
-        """
-        p[0] = FieldSpec(p[1], len(p) == 3)
+            p[0] = Rule(p[1], p[2], p[3], p[4], p[5])
 
     def p_expression(self, p):
         """expression : field
@@ -364,6 +345,12 @@ class RuleParser(Parser):
                      | RARROW
         """
         p[0] = p[1]
+
+    def p_mandatory(self, p):
+        """mandatory : '*'
+                     | empty
+        """
+        p[0] = p[1] == '*'
 
     def p_tags(self, p):
         """tags : '[' tag_list ']'

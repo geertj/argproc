@@ -29,7 +29,7 @@ class TestProcessor(object):
 
     def test_mandatory(self):
         proc = ArgProc()
-        proc.rule('$left * <=> $right')
+        proc.rule('$left <=> $right *')
         assert_raises(Error, proc.process, {})
 
     def test_optional(self):
@@ -181,7 +181,7 @@ class TestProcessor(object):
     def test_local_name(self):
         verify = 'test'
         proc = ArgProc()
-        proc.rule('$left:verify * => $right')
+        proc.rule('$left:verify => $right *')
         assert proc.process({'left': 'test'}) == {'right': 'test'}
         assert_raises(Error, proc.process, {'left': 'value'})
 
@@ -189,7 +189,7 @@ class TestProcessor(object):
         global verify
         verify = 'test'
         proc = ArgProc()
-        proc.rule('$left:verify * => $right')
+        proc.rule('$left:verify => $right *')
         assert proc.process({'left': 'test'}) == {'right': 'test'}
         assert_raises(Error, proc.process, {'left': 'value'})
 
