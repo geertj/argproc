@@ -5,9 +5,9 @@ _tabversion = '3.2'
 
 _lr_method = 'LALR'
 
-_lr_signature = '^\x18\xcd\x15\xb1!\x95J\x1a]\xfa\x83qEw5'
+_lr_signature = 'I\x8er\xd5\xf6\xef=\x08N\xd1:\x11k\xf5\xe8U'
     
-_lr_action_items = {'!':([46,64,],[53,53,]),'NONE':([10,11,24,31,50,58,],[23,23,23,23,23,23,]),'FLOAT':([10,11,24,31,50,58,],[34,34,34,34,34,34,]),'FALSE':([10,11,24,31,50,58,],[32,32,32,32,32,32,]),'NAME':([0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,22,23,24,28,29,31,32,34,37,38,39,40,41,42,43,44,45,46,47,49,50,52,53,57,58,60,61,63,64,65,],[5,-6,-9,-1,-8,-5,-7,5,-47,5,5,-2,5,-47,-39,-38,-37,-36,-40,-30,-32,5,-27,-29,5,-31,-28,-19,-15,-16,-17,-14,-18,-10,-47,-3,54,-42,-11,5,-47,62,-33,5,-35,-4,-41,54,-34,]),'LARROW':([1,3,5,6,7,9,22,23,28,29,32,34,37,38,39,40,41,42,43,49,57,60,65,],[-6,-9,-8,-5,-7,17,-30,-32,-27,-29,-31,-28,-19,-15,-16,-17,-14,-18,-10,-11,-33,-35,-34,]),')':([3,5,20,21,22,23,25,26,27,28,29,30,32,33,34,35,36,37,38,39,40,41,42,43,48,49,57,58,59,60,65,],[-9,-8,-12,-25,-30,-32,-21,-22,49,-27,-29,-23,-31,-20,-28,-24,-26,-19,-15,-16,-17,-14,-18,-10,57,-11,-33,65,-13,-35,-34,]),'(':([2,5,10,11,24,31,33,41,50,58,],[10,-8,24,24,24,24,10,10,24,24,]),'*':([1,3,5,6,7,9,22,23,28,29,32,34,37,38,39,40,41,42,43,44,49,57,60,65,],[-6,-9,-8,-5,-7,15,-30,-32,-27,-29,-31,-28,-19,-15,-16,-17,-14,-18,-10,15,-11,-33,-35,-34,]),',':([3,5,20,21,22,23,25,26,27,28,29,30,32,33,34,35,36,37,38,39,40,41,42,43,48,49,51,54,55,56,57,59,60,62,65,66,],[-9,-8,-12,-25,-30,-32,-21,-22,50,-27,-29,-23,-31,-20,-28,-24,-26,-19,-15,-16,-17,-14,-18,-10,58,-11,50,-45,-43,64,-33,-13,-35,-46,-34,-44,]),'RARROW':([1,3,5,6,7,9,22,23,28,29,32,34,37,38,39,40,41,42,43,49,57,60,65,],[-6,-9,-8,-5,-7,16,-30,-32,-27,-29,-31,-28,-19,-15,-16,-17,-14,-18,-10,-11,-33,-35,-34,]),'FIELD':([0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,22,23,24,28,29,31,32,34,37,38,39,40,41,42,43,44,45,47,49,50,52,57,58,60,61,63,65,],[3,-6,-9,-1,-8,-5,-7,3,-47,3,3,-2,3,-47,-39,-38,-37,-36,-40,-30,-32,3,-27,-29,3,-31,-28,-19,-15,-16,-17,-14,-18,-10,-47,-3,-42,-11,3,-47,-33,3,-35,-4,-41,-34,]),'STRING':([10,11,24,31,50,58,],[29,29,29,29,29,29,]),'ARROW':([1,3,5,6,7,9,22,23,28,29,32,34,37,38,39,40,41,42,43,49,57,60,65,],[-6,-9,-8,-5,-7,18,-30,-32,-27,-29,-31,-28,-19,-15,-16,-17,-14,-18,-10,-11,-33,-35,-34,]),'INTEGER':([10,11,24,31,50,58,],[28,28,28,28,28,28,]),'[':([1,3,5,6,7,9,10,11,14,15,19,22,23,24,28,29,31,32,34,37,38,39,40,41,42,43,44,49,50,52,57,58,60,65,],[-6,-9,-8,-5,-7,-47,31,31,46,-39,-40,-30,-32,31,-27,-29,31,-31,-28,-19,-15,-16,-17,-14,-18,-10,-47,-11,31,46,-33,31,-35,-34,]),':':([3,6,25,],[-9,11,11,]),']':([3,5,20,21,22,23,25,26,28,29,30,32,33,34,35,36,37,38,39,40,41,42,43,49,51,54,55,56,57,59,60,62,65,66,],[-9,-8,-12,-25,-30,-32,-21,-22,-27,-29,-23,-31,-20,-28,-24,-26,-19,-15,-16,-17,-14,-18,-10,-11,60,-45,-43,63,-33,-13,-35,-46,-34,-44,]),'TRUE':([10,11,24,31,50,58,],[22,22,22,22,22,22,]),'$end':([1,3,4,5,6,7,8,9,12,14,15,19,22,23,28,29,32,34,37,38,39,40,41,42,43,44,45,47,49,52,57,60,61,63,65,],[-6,-9,-1,-8,-5,-7,0,-47,-2,-47,-39,-40,-30,-32,-27,-29,-31,-28,-19,-15,-16,-17,-14,-18,-10,-47,-3,-42,-11,-47,-33,-35,-4,-41,-34,]),}
+_lr_action_items = {'.':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,25,27,44,46,47,50,53,59,60,61,62,63,65,71,75,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,39,39,-22,39,-26,-27,39,-34,39,-23,39,-33,39,-35,39,-36,]),'TRUE':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,51,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[3,-31,-11,-19,-21,3,-6,-10,-5,-8,-12,-16,3,-18,-14,-32,3,-13,-20,-9,-17,-7,-1,3,-15,-43,3,-2,3,3,-43,-41,-40,-39,-38,3,-42,-22,3,-37,-26,3,-27,3,3,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,3,-35,-4,-49,-47,-36,]),'!':([54,],[67,]),'NONE':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,51,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[4,-31,-11,-19,-21,4,-6,-10,-5,-8,-12,-16,4,-18,-14,-32,4,-13,-20,-9,-17,-7,-1,4,-15,-43,4,-2,4,4,-43,-41,-40,-39,-38,4,-42,-22,4,-37,-26,4,-27,4,4,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,4,-35,-4,-49,-47,-36,]),')':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,26,27,44,45,46,47,49,50,59,61,62,63,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,44,-24,-22,61,-37,-26,63,-27,-34,-23,-25,-33,-35,-36,]),'(':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[5,-31,-11,-19,-21,5,-6,-10,-5,-8,-12,-16,5,-18,-14,-32,5,-13,-20,31,-17,-7,-1,-15,-43,5,-2,5,5,-43,-41,-40,-39,-38,5,-42,-22,5,-37,-26,5,-27,5,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,5,-35,-4,-49,-47,-36,]),'*':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,25,44,46,47,50,53,59,61,63,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,37,-22,-37,-26,-27,37,-34,-23,-33,-35,-36,]),',':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,26,27,30,32,33,44,46,47,49,50,56,57,59,61,62,63,64,65,68,71,73,74,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,45,-24,48,-28,51,-22,-37,-26,48,-27,-46,69,-34,-23,-25,-33,-29,-30,-48,-35,-49,-47,-36,]),'RARROW':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,25,44,46,47,50,59,61,63,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,38,-22,-37,-26,-27,-34,-23,-33,-35,-36,]),'LARROW':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,25,44,46,47,50,59,61,63,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,40,-22,-37,-26,-27,-34,-23,-33,-35,-36,]),'INTEGER':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,51,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[11,-31,-11,-19,-21,11,-6,-10,-5,-8,-12,-16,11,-18,-14,-32,11,-13,-20,-9,-17,-7,-1,11,-15,-43,11,-2,11,11,-43,-41,-40,-39,-38,11,-42,-22,11,-37,-26,11,-27,11,11,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,11,-35,-4,-49,-47,-36,]),':':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,34,44,46,47,50,59,60,61,63,71,76,],[-31,-11,-19,-21,-6,28,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,52,-22,-37,-26,-27,-34,70,-23,-33,-35,-36,]),'$end':([1,2,3,4,6,7,8,9,10,11,12,13,14,15,17,18,19,20,21,22,24,25,29,36,37,43,44,46,47,50,53,55,56,57,58,59,61,63,66,68,71,72,73,74,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,0,-18,-14,-32,-13,-20,-9,-17,-7,-1,-15,-43,-2,-43,-41,-42,-22,-37,-26,-27,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,-35,-4,-49,-47,-36,]),'@':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,25,36,37,43,44,46,47,50,53,59,61,63,66,69,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,-43,54,-41,-42,-22,-37,-26,-27,-43,-34,-23,-33,54,54,-35,-36,]),'STRING':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,51,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[13,-31,-11,-19,-21,13,-6,-10,-5,-8,-12,-16,13,-18,-14,-32,13,-13,-20,-9,-17,-7,-1,13,-15,-43,13,-2,13,13,-43,-41,-40,-39,-38,13,-42,-22,13,-37,-26,13,-27,13,13,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,13,-35,-4,-49,-47,-36,]),'FIELD':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[15,-31,-11,-19,-21,15,-6,-10,-5,-8,-12,-16,15,-18,-14,-32,15,-13,-20,-9,-17,-7,-1,-15,-43,15,-2,15,15,-43,-41,-40,-39,-38,15,-42,-22,15,-37,-26,15,-27,15,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,15,-35,-4,-49,-47,-36,]),'ARROW':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,25,44,46,47,50,59,61,63,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,41,-22,-37,-26,-27,-34,-23,-33,-35,-36,]),'[':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,27,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,52,53,55,56,57,58,59,60,61,62,63,65,66,68,70,71,72,73,74,75,76,],[16,-31,-11,-19,-21,16,-6,-10,-5,-8,-12,-16,16,-18,-14,-32,16,-13,-20,-9,-17,-7,-1,-15,42,42,16,-2,16,16,-43,-41,-40,-39,-38,16,-42,-22,16,42,-26,16,-27,16,42,-3,-46,-44,-45,-34,42,-23,42,-33,42,-43,-48,16,-35,-4,-49,-47,42,-36,]),']':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,27,30,44,46,47,50,59,60,61,62,63,71,75,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,-24,47,-22,-37,-26,-27,-34,71,-23,-25,-33,-35,76,-36,]),'FALSE':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,51,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[18,-31,-11,-19,-21,18,-6,-10,-5,-8,-12,-16,18,-18,-14,-32,18,-13,-20,-9,-17,-7,-1,18,-15,-43,18,-2,18,18,-43,-41,-40,-39,-38,18,-42,-22,18,-37,-26,18,-27,18,18,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,18,-35,-4,-49,-47,-36,]),'NAME':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,28,29,31,35,36,37,38,39,40,41,42,43,44,45,46,47,48,50,52,53,54,55,56,57,58,59,61,63,66,67,68,70,71,72,73,74,76,],[1,-31,-11,-19,-21,1,-6,-10,-5,-8,-12,-16,1,-18,-14,-32,1,-13,-20,-9,-17,-7,-1,-15,-43,1,-2,1,1,-43,-41,-40,59,-39,-38,1,-42,-22,1,-37,-26,1,-27,1,-43,68,-3,-46,-44,-45,-34,-23,-33,-43,73,-48,1,-35,-4,-49,-47,-36,]),'FLOAT':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,51,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[20,-31,-11,-19,-21,20,-6,-10,-5,-8,-12,-16,20,-18,-14,-32,20,-13,-20,-9,-17,-7,-1,20,-15,-43,20,-2,20,20,-43,-41,-40,-39,-38,20,-42,-22,20,-37,-26,20,-27,20,20,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,20,-35,-4,-49,-47,-36,]),'{':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,28,29,31,35,36,37,38,40,41,42,43,44,45,46,47,48,50,52,53,55,56,57,58,59,61,63,66,68,70,71,72,73,74,76,],[23,-31,-11,-19,-21,23,-6,-10,-5,-8,-12,-16,23,-18,-14,-32,23,-13,-20,-9,-17,-7,-1,-15,-43,23,-2,23,23,-43,-41,-40,-39,-38,23,-42,-22,23,-37,-26,23,-27,23,-43,-3,-46,-44,-45,-34,-23,-33,-43,-48,23,-35,-4,-49,-47,-36,]),'}':([1,2,3,4,6,7,8,9,10,11,13,14,15,17,18,19,20,21,24,32,33,44,46,47,50,59,61,63,64,65,71,76,],[-31,-11,-19,-21,-6,-10,-5,-8,-12,-16,-18,-14,-32,-13,-20,-9,-17,-7,-15,-28,50,-22,-37,-26,-27,-34,-23,-33,-29,-30,-35,-36,]),}
 
 _lr_action = { }
 for _k, _v in _lr_action_items.items():
@@ -16,7 +16,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'direction':([9,],[13,]),'validation':([0,8,10,13,24,31,50,58,],[1,1,36,1,36,36,36,36,]),'mandatory':([9,44,],[14,52,]),'name':([0,8,10,11,13,24,31,50,58,],[2,2,33,41,2,33,33,33,33,]),'tuple':([10,11,24,31,50,58,],[30,40,30,30,30,30,]),'tags':([14,52,],[45,61,]),'list':([10,11,24,31,50,58,],[35,42,35,35,35,35,]),'argument':([10,24,31,50,58,],[20,20,20,59,59,]),'rule':([0,8,],[4,12,]),'field':([0,8,10,11,13,24,31,50,58,],[6,6,25,38,6,25,25,25,25,]),'literal':([10,11,24,31,50,58,],[26,39,26,26,26,26,]),'validator':([11,],[43,]),'tag_list':([46,],[56,]),'function_call':([0,8,10,11,13,24,31,50,58,],[7,7,21,37,7,21,21,21,21,]),'tag':([46,64,],[55,66,]),'main':([0,],[8,]),'expression':([0,8,13,],[9,9,44,]),'empty':([9,14,44,52,],[19,47,19,47,]),'argument_list':([10,24,31,],[27,48,51,]),}
+_lr_goto_items = {'mandatory':([25,53,],[36,66,]),'list':([0,5,12,16,28,31,35,42,45,48,52,70,],[21,21,21,21,21,21,21,21,21,21,21,21,]),'direction':([25,],[35,]),'function_call':([0,5,12,16,28,31,35,42,45,48,52,70,],[2,2,2,2,2,2,2,2,2,2,2,2,]),'tag':([36,66,69,],[56,56,74,]),'tags':([36,66,],[55,72,]),'field':([0,5,12,16,28,31,35,42,45,48,52,70,],[7,7,7,7,7,7,7,7,7,7,7,7,]),'literal':([0,5,12,16,23,28,31,35,42,45,48,51,52,70,],[8,8,8,8,34,8,8,8,8,8,8,34,8,8,]),'dict':([0,5,12,16,28,31,35,42,45,48,52,70,],[9,9,9,9,9,9,9,9,9,9,9,9,]),'argument_list':([5,16,31,],[26,30,49,]),'main':([0,],[12,]),'empty':([25,36,53,66,],[43,58,43,58,]),'attribute_reference':([0,5,12,16,28,31,35,42,45,48,52,70,],[10,10,10,10,10,10,10,10,10,10,10,10,]),'key_value':([23,51,],[32,64,]),'tuple':([0,5,12,16,28,31,35,42,45,48,52,70,],[6,6,6,6,6,6,6,6,6,6,6,6,]),'slicing':([0,5,12,16,28,31,35,42,45,48,52,70,],[14,14,14,14,14,14,14,14,14,14,14,14,]),'subscription':([0,5,12,16,28,31,35,42,45,48,52,70,],[17,17,17,17,17,17,17,17,17,17,17,17,]),'tag_list':([36,66,],[57,57,]),'name':([0,5,12,16,28,31,35,42,45,48,52,70,],[19,19,19,19,19,19,19,19,19,19,19,19,]),'key_value_list':([23,],[33,]),'rule':([0,12,],[22,29,]),'validation':([0,5,12,16,28,31,35,42,45,48,52,70,],[24,24,24,24,24,24,24,24,24,24,24,24,]),'expression':([0,5,12,16,28,31,35,42,45,48,52,70,],[25,27,25,27,46,27,53,60,62,62,65,75,]),}
 
 _lr_goto = { }
 for _k, _v in _lr_goto_items.items():
@@ -26,51 +26,53 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> main","S'",1,None,None,None),
-  ('main -> rule','main',1,'p_main','/home/geertj/Projects/argproc/lib/argproc/parser.py',251),
-  ('main -> main rule','main',2,'p_main','/home/geertj/Projects/argproc/lib/argproc/parser.py',252),
-  ('rule -> expression mandatory tags','rule',3,'p_rule','/home/geertj/Projects/argproc/lib/argproc/parser.py',260),
-  ('rule -> expression direction expression mandatory tags','rule',5,'p_rule','/home/geertj/Projects/argproc/lib/argproc/parser.py',261),
-  ('expression -> field','expression',1,'p_expression','/home/geertj/Projects/argproc/lib/argproc/parser.py',269),
-  ('expression -> validation','expression',1,'p_expression','/home/geertj/Projects/argproc/lib/argproc/parser.py',270),
-  ('expression -> function_call','expression',1,'p_expression','/home/geertj/Projects/argproc/lib/argproc/parser.py',271),
-  ('name -> NAME','name',1,'p_name','/home/geertj/Projects/argproc/lib/argproc/parser.py',276),
-  ('field -> FIELD','field',1,'p_field','/home/geertj/Projects/argproc/lib/argproc/parser.py',280),
-  ('validation -> field : validator','validation',3,'p_validation','/home/geertj/Projects/argproc/lib/argproc/parser.py',284),
-  ('function_call -> name ( argument_list )','function_call',4,'p_function_call','/home/geertj/Projects/argproc/lib/argproc/parser.py',288),
-  ('argument_list -> argument','argument_list',1,'p_argument_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',292),
-  ('argument_list -> argument_list , argument','argument_list',3,'p_argument_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',293),
-  ('validator -> name','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',301),
-  ('validator -> field','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',302),
-  ('validator -> literal','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',303),
-  ('validator -> tuple','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',304),
-  ('validator -> list','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',305),
-  ('validator -> function_call','validator',1,'p_validator','/home/geertj/Projects/argproc/lib/argproc/parser.py',306),
-  ('argument -> name','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',311),
-  ('argument -> field','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',312),
-  ('argument -> literal','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',313),
-  ('argument -> tuple','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',314),
-  ('argument -> list','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',315),
-  ('argument -> function_call','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',316),
-  ('argument -> validation','argument',1,'p_argument','/home/geertj/Projects/argproc/lib/argproc/parser.py',317),
-  ('literal -> INTEGER','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',322),
-  ('literal -> FLOAT','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',323),
-  ('literal -> STRING','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',324),
-  ('literal -> TRUE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',325),
-  ('literal -> FALSE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',326),
-  ('literal -> NONE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',327),
-  ('tuple -> ( argument_list )','tuple',3,'p_tuple','/home/geertj/Projects/argproc/lib/argproc/parser.py',332),
-  ('tuple -> ( argument_list , )','tuple',4,'p_tuple','/home/geertj/Projects/argproc/lib/argproc/parser.py',333),
-  ('list -> [ argument_list ]','list',3,'p_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',339),
-  ('direction -> ARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',343),
-  ('direction -> LARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',344),
-  ('direction -> RARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',345),
-  ('mandatory -> *','mandatory',1,'p_mandatory','/home/geertj/Projects/argproc/lib/argproc/parser.py',350),
-  ('mandatory -> empty','mandatory',1,'p_mandatory','/home/geertj/Projects/argproc/lib/argproc/parser.py',351),
-  ('tags -> [ tag_list ]','tags',3,'p_tags','/home/geertj/Projects/argproc/lib/argproc/parser.py',356),
-  ('tags -> empty','tags',1,'p_tags','/home/geertj/Projects/argproc/lib/argproc/parser.py',357),
-  ('tag_list -> tag','tag_list',1,'p_tag_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',363),
-  ('tag_list -> tag_list , tag','tag_list',3,'p_tag_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',364),
-  ('tag -> NAME','tag',1,'p_tag','/home/geertj/Projects/argproc/lib/argproc/parser.py',371),
-  ('tag -> ! NAME','tag',2,'p_tag','/home/geertj/Projects/argproc/lib/argproc/parser.py',372),
-  ('empty -> <empty>','empty',0,'p_empty','/home/geertj/Projects/argproc/lib/argproc/parser.py',380),
+  ('main -> rule','main',1,'p_main','/home/geertj/Projects/argproc/lib/argproc/parser.py',355),
+  ('main -> main rule','main',2,'p_main','/home/geertj/Projects/argproc/lib/argproc/parser.py',356),
+  ('rule -> expression mandatory tags','rule',3,'p_rule','/home/geertj/Projects/argproc/lib/argproc/parser.py',364),
+  ('rule -> expression direction expression mandatory tags','rule',5,'p_rule','/home/geertj/Projects/argproc/lib/argproc/parser.py',365),
+  ('expression -> literal','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',373),
+  ('expression -> tuple','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',374),
+  ('expression -> list','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',375),
+  ('expression -> dict','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',376),
+  ('expression -> name','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',377),
+  ('expression -> field','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',378),
+  ('expression -> function_call','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',379),
+  ('expression -> attribute_reference','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',380),
+  ('expression -> subscription','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',381),
+  ('expression -> slicing','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',382),
+  ('expression -> validation','expression',1,'p_expresssion','/home/geertj/Projects/argproc/lib/argproc/parser.py',383),
+  ('literal -> INTEGER','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',388),
+  ('literal -> FLOAT','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',389),
+  ('literal -> STRING','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',390),
+  ('literal -> TRUE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',391),
+  ('literal -> FALSE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',392),
+  ('literal -> NONE','literal',1,'p_literal','/home/geertj/Projects/argproc/lib/argproc/parser.py',393),
+  ('tuple -> ( argument_list )','tuple',3,'p_tuple','/home/geertj/Projects/argproc/lib/argproc/parser.py',398),
+  ('tuple -> ( argument_list , )','tuple',4,'p_tuple','/home/geertj/Projects/argproc/lib/argproc/parser.py',399),
+  ('argument_list -> expression','argument_list',1,'p_argument_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',405),
+  ('argument_list -> argument_list , expression','argument_list',3,'p_argument_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',406),
+  ('list -> [ argument_list ]','list',3,'p_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',414),
+  ('dict -> { key_value_list }','dict',3,'p_dict','/home/geertj/Projects/argproc/lib/argproc/parser.py',418),
+  ('key_value_list -> key_value','key_value_list',1,'p_key_value_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',422),
+  ('key_value_list -> key_value_list , key_value','key_value_list',3,'p_key_value_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',423),
+  ('key_value -> literal : expression','key_value',3,'p_key_value','/home/geertj/Projects/argproc/lib/argproc/parser.py',431),
+  ('name -> NAME','name',1,'p_name','/home/geertj/Projects/argproc/lib/argproc/parser.py',435),
+  ('field -> FIELD','field',1,'p_field','/home/geertj/Projects/argproc/lib/argproc/parser.py',439),
+  ('function_call -> name ( argument_list )','function_call',4,'p_function_call','/home/geertj/Projects/argproc/lib/argproc/parser.py',443),
+  ('attribute_reference -> expression . NAME','attribute_reference',3,'p_attribute_reference','/home/geertj/Projects/argproc/lib/argproc/parser.py',447),
+  ('subscription -> expression [ expression ]','subscription',4,'p_subscription','/home/geertj/Projects/argproc/lib/argproc/parser.py',451),
+  ('slicing -> expression [ expression : expression ]','slicing',6,'p_slicing','/home/geertj/Projects/argproc/lib/argproc/parser.py',455),
+  ('validation -> field : expression','validation',3,'p_validation','/home/geertj/Projects/argproc/lib/argproc/parser.py',459),
+  ('direction -> ARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',463),
+  ('direction -> LARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',464),
+  ('direction -> RARROW','direction',1,'p_direction','/home/geertj/Projects/argproc/lib/argproc/parser.py',465),
+  ('mandatory -> *','mandatory',1,'p_mandatory','/home/geertj/Projects/argproc/lib/argproc/parser.py',470),
+  ('mandatory -> empty','mandatory',1,'p_mandatory','/home/geertj/Projects/argproc/lib/argproc/parser.py',471),
+  ('empty -> <empty>','empty',0,'p_empty','/home/geertj/Projects/argproc/lib/argproc/parser.py',476),
+  ('tags -> tag_list','tags',1,'p_tags','/home/geertj/Projects/argproc/lib/argproc/parser.py',480),
+  ('tags -> empty','tags',1,'p_tags','/home/geertj/Projects/argproc/lib/argproc/parser.py',481),
+  ('tag_list -> tag','tag_list',1,'p_tag_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',487),
+  ('tag_list -> tag_list , tag','tag_list',3,'p_tag_list','/home/geertj/Projects/argproc/lib/argproc/parser.py',488),
+  ('tag -> @ NAME','tag',2,'p_tag','/home/geertj/Projects/argproc/lib/argproc/parser.py',495),
+  ('tag -> @ ! NAME','tag',3,'p_tag','/home/geertj/Projects/argproc/lib/argproc/parser.py',496),
 ]

@@ -8,7 +8,7 @@
 
 import sys
 
-from argproc.error import Error
+from argproc.error import *
 from argproc.parser import RuleParser
 
 
@@ -47,9 +47,9 @@ class ArgumentProcessor(object):
                 missing.append(field)
         if missing:
             if rule.mandatory:
-                raise Error('Required %s fields missing: %s' % 
-                            (ispec.side, ', '.join(missing)),
-                            fields=missing, rule=rule.tostring())
+                m = 'Required %s fields missing: %s' % \
+                        (ispec.side, ', '.join(missing))
+                raise MissingFieldError(m, fields=missing, rule=rule)
             return result
         ivalue = ispec.eval(args, self.namespace)
         if self.ignore_none and ivalue is None:
@@ -59,16 +59,14 @@ class ArgumentProcessor(object):
             result[ofields[0]] = ivalue
         else:
             if not isinstance(ivalue, tuple) and not isinstance(ivalue, list):
-                raise Error('Expression on %s hand size should evaluate '
-                            'in a tuple or list in case of multiple '
-                            'fields on %s hand side.' %
-                            (ispec.side, ospec.side),
-                            fields=ofields, rule=rule.tostring())
+                m = 'Expression on %s hand size should evaluate in a tuple ' \
+                    'or list in case of multiple fields on %s hand side.' % \
+                        (ispec.side, ospec.side)
+                raise EvalError(m, fields=ofields, rule=rule)
             if len(ofields) != len(ivalue):
-                raise Error('Wrong number of fields on %s hand side'
-                            '(%d expect %d)' %
-                            (ospec.side, len(ofields), len(ivalue)),
-                            fields=ofields, rule=rule.tostring())
+                m = 'Wrong number of fields on %s hand side (%d expect %d)' % \
+                        (ospec.side, len(ofields), len(ivalue))
+                raise EvalError(m, fields=ofields, rule=rule)
             for i in range(len(rfields)):
                 result[ofields[i]] = ivalue[i]
         return result

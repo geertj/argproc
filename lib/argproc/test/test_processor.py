@@ -56,62 +56,91 @@ class TestProcessor(object):
         assert proc.process({'left': 10}) == {}
         assert proc.reverse({'right': 10}) == {'left': 10}
 
-    def test_function(self):
+    def test_bidrectional(self):
+        proc = ArgProc()
+        proc.rule('$left <=> $right')
+        assert proc.process({'left': 10}) == {'right': 10}
+        assert proc.reverse({'right': 10}) == {'left': 10}
+
+    def test_none(self):
+        proc = ArgProc()
+        proc.rule('None => $right')
+        assert proc.process({}) == {'right': None}
+
+    def test_true(self):
+        proc = ArgProc()
+        proc.rule('True => $right')
+        assert proc.process({}) == {'right': True}
+
+    def test_false(self):
+        proc = ArgProc()
+        proc.rule('False => $right')
+        assert proc.process({}) == {'right': False}
+
+    def test_int(self):
+        proc = ArgProc()
+        proc.rule('10 => $right')
+        assert proc.process({}) == {'right': 10}
+
+    def test_float(self):
+        proc = ArgProc()
+        proc.rule('3.14 => $right')
+        assert proc.process({}) == {'right': 3.14}
+
+    def test_str_single_quoted(self):
+        proc = ArgProc()
+        proc.rule('\'test\' => $right')
+        assert proc.process({}) == {'right': 'test'}
+
+    def test_str_double_quoted(self):
+        proc = ArgProc()
+        proc.rule('"test" => $right')
+        assert proc.process({}) == {'right': 'test'}
+
+    def test_tuple(self):
+        proc = ArgProc()
+        proc.rule('(1,2,3) => $right')
+        assert proc.process({}) == {'right': (1,2,3)}
+        
+    def test_tuple_with_one_entry(self):
+        proc = ArgProc()
+        proc.rule('(1,) => $right')
+        assert proc.process({}) == {'right': (1,)}
+
+    def test_list(self):
+        proc = ArgProc()
+        proc.rule('[1,2,3] => $right')
+        assert proc.process({}) == {'right': [1,2,3]}
+
+    def test_dict(self):
+        proc = ArgProc()
+        proc.rule('{1:2, 3:4} => $right')
+        assert proc.process({}) == {'right': {1:2, 3:4}}
+
+    def test_function_call(self):
         proc = ArgProc()
         proc.rule('int($left) => $right')
         assert proc.process({'left': '10'}) == {'right': 10}
 
-    def test_function_reverse(self):
-        proc = ArgProc()
-        proc.rule('$left <= int($right)')
-        assert proc.reverse({'right': '10'}) == {'left': 10} 
-
-    def test_function_bidirectional(self):
-        proc = ArgProc()
-        proc.rule('int($left) <=> int($right)')
-        assert proc.process({'left': '10'}) == {'right': 10} 
-        assert proc.reverse({'right': '10'}) == {'left': 10} 
-
-    def test_multi_arg(self):
+    def test_function_call_with_multiple_arguments(self):
         proc = ArgProc()
         proc.rule('max($left, 2) => $right')
         assert proc.process({'left': 1}) == {'right': 2}
 
-    def test_resursive_multi_arg(self):
+    def test_attribute_reference(self):
         proc = ArgProc()
-        proc.rule('max($left1, max($left2, 2)) => $right')
-        right = proc.process({'left1': 1, 'left2': 1})
-        assert right == {'right': 2 }
+        proc.rule('int.__class__ => $right')
+        assert proc.process({}) == {'right': type}
 
-    def test_function_negative_int_argument(self):
+    def test_subscription(self):
         proc = ArgProc()
-        proc.rule('max($left, -2) => $right')
-        assert proc.process({'left': -3}) == {'right': -2}
+        proc.rule('[1,2,3][1] => $right')
+        assert proc.process({}) == {'right': 2}
 
-    def test_function_float_argument(self):
+    def test_slicing(self):
         proc = ArgProc()
-        proc.rule('max($left, 2.0) => $right')
-        assert proc.process({'left': 1.0}) == {'right': 2.0}
-
-    def test_function_negative_float_argument(self):
-        proc = ArgProc()
-        proc.rule('max($left, -2.0) => $right')
-        assert proc.process({'left': -3.0}) == {'right': -2.0}
-
-    def test_function_true_argument(self):
-        proc = ArgProc()
-        proc.rule('max($left, True) => $right')
-        assert proc.process({'left': False}) == {'right': True}
-
-    def test_function_false_argument(self):
-        proc = ArgProc()
-        proc.rule('min($left, False) => $right')
-        assert proc.process({'left': True}) == {'right': False}
-
-    def test_function_none_argument(self):
-        proc = ArgProc()
-        proc.rule('min($left, None) => $right')
-        assert proc.process({'left': False}) == {'right': None}
+        proc.rule('[1,2,3][1:2] => $right')
+        assert proc.process({}) == {'right': [2]}
 
     def test_validator_callable(self):
         proc = ArgProc()
@@ -119,35 +148,11 @@ class TestProcessor(object):
         assert proc.process({'left': 10}) == {'right': 10}
         assert_raises(Error, proc.process, {'left': '10a'})
 
-    def test_validator_literal_string(self):
+    def test_validator_literal(self):
         proc = ArgProc()
         proc.rule('$left:"value" => $right')
         assert proc.process({'left': 'value'}) == {'right': 'value'}
         assert_raises(Error, proc.process, {'left': 'val'})
-
-    def test_validator_literal_int(self):
-        proc = ArgProc()
-        proc.rule('$left:10 => $right')
-        assert proc.process({'left': 10}) == {'right': 10}
-        assert_raises(Error, proc.process, {'left': 11})
-
-    def test_validator_literal_single_quoted_string(self):
-        proc = ArgProc()
-        proc.rule('$left:\'value\' => $right')
-        assert proc.process({'left': 'value'}) == {'right': 'value'}
-        assert_raises(Error, proc.process, {'left': 'val1'})
-
-    def test_validator_literal_double_quoted_string(self):
-        proc = ArgProc()
-        proc.rule('$left:"value" => $right')
-        assert proc.process({'left': 'value'}) == {'right': 'value'}
-        assert_raises(Error, proc.process, {'left': 'val1'})
-
-    def test_validator_literal_float(self):
-        proc = ArgProc()
-        proc.rule('$left:10.0 => $right')
-        assert proc.process({'left': 10.0}) == {'right': 10.0}
-        assert_raises(Error, proc.process, {'left': 10.1})
 
     def test_validator_tuple(self):
         proc = ArgProc()
@@ -155,19 +160,13 @@ class TestProcessor(object):
         assert proc.process({'left': 2}) == {'right': 2}
         assert_raises(Error, proc.process, {'left': 4})
 
-    def test_validator_tuple_with_one_entry(self):
-        proc = ArgProc()
-        proc.rule('$left:(1,) => $right')
-        assert proc.process({'left': 1}) == {'right': 1}
-        assert_raises(Error, proc.process, {'left': 2})
-
     def test_validator_list(self):
         proc = ArgProc()
         proc.rule('$left:[1,2,3] => $right')
         assert proc.process({'left': 2}) == {'right': 2}
         assert_raises(Error, proc.process, {'left': 4})
 
-    def test_validator_constructed(self):
+    def test_validator_function_call(self):
         proc = ArgProc()
         proc.rule('$left:set((1,2)) => $right')
         assert proc.process({'left': 1}) == {'right': 1}
@@ -195,21 +194,21 @@ class TestProcessor(object):
 
     def test_tags(self):
         proc = ArgProc()
-        proc.rule('$left => $right [tag]')
+        proc.rule('$left => $right @tag')
         assert proc.process({'left': 10}, tags=['tag']) == {'right': 10}
         assert proc.process({'left': 10}, tags=[]) == {}
         assert proc.process({'left': 10}) == {'right': 10}
 
     def test_multiple_tags(self):
         proc = ArgProc()
-        proc.rule('$left => $right [tag1,tag2]')
+        proc.rule('$left => $right @tag1,@tag2')
         assert proc.process({'left': 10}, tags=['tag2']) == {'right': 10}
         assert proc.process({'left': 10}, tags=[]) == {}
         assert proc.process({'left': 10}) == {'right': 10}
 
     def test_negated_tag(self):
         proc = ArgProc()
-        proc.rule('$left => $right [!tag]')
+        proc.rule('$left => $right @!tag')
         assert proc.process({'left': 10}) == {'right': 10}
         assert proc.process({'left': 10}, tags=['tg']) == {'right': 10}
         assert proc.process({'left': 10}, tags=['tag']) == {}

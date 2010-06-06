@@ -15,13 +15,14 @@ The rule language is designed to be human readable. Some examples below:
 
   $id:int <= $objectid
   $name <=> $name *
-  $type:set(('test', 'blaat')) <=> $objecttype [update]
+  $type:set(('test', 'blaat')) <=> $objecttype @update
   int($value) <=> str($value)
   concat($name, $value) => $nameval
-  $field:isinstance($_, FieldStorage)
+  $field:check_instance(FieldStorage)
   $password:$verify => $password
   concat($year:int, '-', $month:int, '-', $day:int) <=> split($date, '-')
 """
 
 from argproc.error import Error
 from argproc.processor import ArgumentProcessor
+from argproc.parser import ParseError, ValidationError

@@ -17,3 +17,16 @@ class Error(Exception):
 
     def __str__(self):
         return self.error
+
+
+class ParseError(Error):
+    """Could not parse a rule."""
+
+class EvalError(Error):
+    """Could not evaluate a rule."""
+
+class ValidationError(Error):
+    """Could not validate a field."""
+
+class MissingFieldError(Error):
+    """A mandatory field is missing."""
