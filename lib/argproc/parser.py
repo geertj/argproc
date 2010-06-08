@@ -326,7 +326,7 @@ class RuleParser(Parser):
     literals = ('(', ')', '[', ']', ',', ':', '*', '!', '{', '}', '.', '@')
 
     t_NAME = '[a-zA-Z_][a-zA-Z0-9_]*'
-    t_FIELD = r'\$[a-zA-Z_][a-zA-Z0-9_]*'
+    t_FIELD = r'\$!?[a-zA-Z_][a-zA-Z0-9_]*'
     t_INTEGER = '-?[0-9]+'
     t_FLOAT = r'-?[0-9]+\.[0-9]+'
     t_STRING = '\'[^\']+\'|"[^"]+"'
