@@ -15,10 +15,11 @@ from argproc.parser import RuleParser
 class ArgumentProcessor(object):
     """Rule-based arguments processor."""
 
-    def __init__(self, namespace=None, ignore_none=False):
+    def __init__(self, namespace=None, tags=None, ignore_none=False):
         if namespace is None:
             namespace = self._get_caller_namespace(2)
         self.namespace = namespace
+        self.tags = tags
         self.ignore_none = ignore_none
         self._rules = []
         self._parser = RuleParser()
@@ -82,27 +83,27 @@ class ArgumentProcessor(object):
                 return True
         return False
 
-    def process(self, left, tags=None):
+    def process(self, left):
         """Process the arguments in `left' and return the transformed right
         hand side."""
         right = {}
         for rule in self._rules:
             if rule.direction == '<=':
                 continue
-            if not self._match_tags(rule, tags):
+            if not self._match_tags(rule, self.tags):
                 continue
             args = self._process_rule(left, rule.left, rule.right, rule)
             right.update(args)
         return right
 
-    def process_reverse(self, right, tags=None):
+    def process_reverse(self, right):
         """Process the arguments in `right' and return the transformed left
         hand side."""
         left = {}
         for rule in self._rules:
             if rule.direction == '=>':
                 continue
-            if not self._match_tags(rule, tags):
+            if not self._match_tags(rule, self.tags):
                 continue
             args = self._process_rule(right, rule.right, rule.left, rule)
             left.update(args)

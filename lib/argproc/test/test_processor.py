@@ -193,25 +193,37 @@ class TestProcessor(object):
         assert_raises(Error, proc.process, {'left': 'value'})
 
     def test_tags(self):
+        proc = ArgProc(tags=['tag'])
+        proc.rule('$left => $right @tag')
+        assert proc.process({'left': 10}) == {'right': 10}
+        proc = ArgProc(tags=[])
+        proc.rule('$left => $right @tag')
+        assert proc.process({'left': 10}) == {}
         proc = ArgProc()
         proc.rule('$left => $right @tag')
-        assert proc.process({'left': 10}, tags=['tag']) == {'right': 10}
-        assert proc.process({'left': 10}, tags=[]) == {}
         assert proc.process({'left': 10}) == {'right': 10}
 
     def test_multiple_tags(self):
+        proc = ArgProc(tags=['tag2'])
+        proc.rule('$left => $right @tag1,@tag2')
+        assert proc.process({'left': 10}) == {'right': 10}
+        proc = ArgProc(tags=[])
+        proc.rule('$left => $right @tag1,@tag2')
+        assert proc.process({'left': 10}) == {}
         proc = ArgProc()
         proc.rule('$left => $right @tag1,@tag2')
-        assert proc.process({'left': 10}, tags=['tag2']) == {'right': 10}
-        assert proc.process({'left': 10}, tags=[]) == {}
         assert proc.process({'left': 10}) == {'right': 10}
 
     def test_negated_tag(self):
         proc = ArgProc()
         proc.rule('$left => $right @!tag')
         assert proc.process({'left': 10}) == {'right': 10}
-        assert proc.process({'left': 10}, tags=['tg']) == {'right': 10}
-        assert proc.process({'left': 10}, tags=['tag']) == {}
+        proc = ArgProc(tags=['tg'])
+        proc.rule('$left => $right @!tag')
+        assert proc.process({'left': 10}) == {'right': 10}
+        proc = ArgProc(tags=['tag'])
+        proc.rule('$left => $right @!tag')
+        assert proc.process({'left': 10}) == {}
 
     def test_comment(self):
         proc = ArgProc()
