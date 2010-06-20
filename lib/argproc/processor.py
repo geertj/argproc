@@ -15,12 +15,14 @@ from argproc.parser import RuleParser
 class ArgumentProcessor(object):
     """Rule-based arguments processor."""
 
-    def __init__(self, namespace=None, tags=None, ignore_none=False):
+    def __init__(self, namespace=None, tags=None, ignore_none=False,
+                 ignore_missing=False):
         if namespace is None:
             namespace = self._get_caller_namespace(2)
         self.namespace = namespace
         self.tags = tags
         self.ignore_none = ignore_none
+        self.ignore_missing = ignore_missing
         self._rules = []
         self._parser = RuleParser()
 
@@ -47,7 +49,7 @@ class ArgumentProcessor(object):
             if field not in args:
                 missing.append(field)
         if missing:
-            if rule.mandatory:
+            if rule.mandatory and not self.ignore_missing:
                 m = 'Required %s fields missing: %s' % \
                         (ispec.side, ', '.join(missing))
                 raise MissingFieldError(m, fields=missing, rule=rule)
