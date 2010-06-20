@@ -355,7 +355,7 @@ class RuleParser(Parser):
         """rule : expression mandatory tags
                 | expression direction expression mandatory tags"""
 
-        if len(p) == 3:
+        if len(p) == 4:
             p[0] = Rule(p[1], '<=>', p[1], p[2], p[3])
         else:
             p[0] = Rule(p[1], p[2], p[3], p[4], p[5])
