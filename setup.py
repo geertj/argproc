@@ -23,7 +23,7 @@ class gentab(Command):
 
     def run(self):
         from argproc.parser import RuleParser
-        RuleParser._write_parsetab()
+        RuleParser._write_tables()
 
 
 setup(
