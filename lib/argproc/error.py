@@ -16,7 +16,7 @@ class Error(Exception):
         self.rule = rule
 
     def __str__(self):
-        return self.error
+        return self.error or ''
 
 
 class ParseError(Error):
