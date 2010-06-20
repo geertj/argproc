@@ -28,7 +28,7 @@ class gentab(Command):
 
 setup(
     name = 'argproc',
-    version = '1.3',
+    version = '1.4',
     description = 'A rule-based arguments processor',
     author = 'Geert Jansen',
     author_email = 'geert@boskant.nl',
