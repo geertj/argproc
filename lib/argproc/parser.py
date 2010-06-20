@@ -197,14 +197,13 @@ class Field(Node):
 class FunctionCall(Node):
 
     def __init__(self, function, arguments):
-        super(FunctionCall, self).__init__(arguments)
-        self.function = function
+        super(FunctionCall, self).__init__(function, arguments)
 
     def eval(self, args, globals):
         arguments = []
-        for arg in self:
+        for arg in self[1:]:
             arguments.append(arg.eval(args, globals))
-        function = self.function.eval(args, globals)
+        function = self[0].eval(args, globals)
         value = function(*arguments)
         return value
 
@@ -431,8 +430,12 @@ class RuleParser(Parser):
         p[0] = Field(p[1])
 
     def p_function_call(self, p):
-        """function_call : name '(' argument_list ')'"""
-        p[0] = FunctionCall(p[1], p[3])
+        """function_call : expression '(' ')'
+                         | expression '(' argument_list ')'"""
+        if len(p) == 4:
+            p[0] = FunctionCall(p[1], [])
+        else:
+            p[0] = FunctionCall(p[1], p[3])
 
     def p_attribute_reference(self, p):
         """attribute_reference : expression '.' NAME"""
