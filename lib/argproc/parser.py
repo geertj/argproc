@@ -208,8 +208,8 @@ class FunctionCall(Node):
         return value
 
     def tostring(self):
-        arguments = ', '.join((arg.tostring() for arg in self))
-        return '%s(%s)' % (self.function.tostring(), arguments)
+        arguments = ', '.join((arg.tostring() for arg in self[1:]))
+        return '%s(%s)' % (self[0].tostring(), arguments)
 
 
 class AttributeReference(Node):
