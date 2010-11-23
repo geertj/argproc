@@ -70,7 +70,7 @@ class ArgumentProcessor(object):
                 m = 'Wrong number of fields on %s hand side (%d expect %d)' % \
                         (ospec.side, len(ofields), len(ivalue))
                 raise EvalError(m, fields=ofields, rule=rule)
-            for i in range(len(rfields)):
+            for i in range(len(ofields)):
                 result[ofields[i]] = ivalue[i]
         return result
 
