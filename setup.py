@@ -31,8 +31,8 @@ setup(
     version = '1.4',
     description = 'A rule-based arguments processor',
     author = 'Geert Jansen',
-    author_email = 'geert@boskant.nl',
-    url = 'http://bitbucket.org/geertj/argproc',
+    author_email = 'geertj@gmail.com',
+    url = 'http://github.com/geertj/argproc',
     license = 'MIT',
     classifiers = [
         'Development Status :: 4 - Beta',
